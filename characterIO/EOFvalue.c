@@ -1,9 +1,8 @@
 #include <stdio.h>
 
+/* print the value of EOF */
 main(){
-int c;
 
-c = getchar()!= EOF;
-printf("%d\n",c);
+	printf("%d\n",EOF);
 
 }
