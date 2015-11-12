@@ -2,12 +2,11 @@
 /* counting characters in input */
 
 main(){
-	
-	int e;
-	e = getchar();
-	printf("%d",e);
+	long nc;
+	nc = 0;
+	while (getchar() != EOF)
+	++nc;
+	printf("%ld this is where output should be\n",nc);
+}
 
-
-
-	}
 
