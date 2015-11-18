@@ -2,7 +2,10 @@
 #include <stdbool.h>
 
 main(){
-	char x = 'a' + 'b';
-	printf("%d", x);
+	int  x = 'a' + 'b';;
 
+	 int y = 'b';	
+	
+	printf("%d\n", x);
+	
 }
