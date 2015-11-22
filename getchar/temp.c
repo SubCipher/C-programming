@@ -3,11 +3,12 @@
 
 main(){
 	int  x = 'A' + 'B';
-
-	 int y = 'b';	
+	printf("hello world");
+	int y = 'b';	
 	
-	printf("%d\n", x);
-	printf("%d\n, %d",'A','B');
+	printf("\n %d \n",x);
+	printf("\n %d \n %d \n",'A','B');
+	printf("\n %d \n",'y');
 
 	
 }
