@@ -13,3 +13,5 @@ sudo /Applications/OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia 
 Ready to start.
 To continue we need to erase the disk at /Volumes/LexarUSB1.
 If you wish to continue type (Y) then press return: 
+
+radio interview BCI and XQ
