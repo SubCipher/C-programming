@@ -6,12 +6,12 @@ main(){
 	int a;
 	int z;
 	int loop = 0;
-	while (a <= z);
-	printf("%d\n",z);
-	printf("%d\n",a);
+	while ( z >=a );
+	printf("%d\n",'a');
+	printf("%d\n",'z');
 	++a;
-	printf("loop value = %d\n",loop);
 	++loop;
+	printf("loop value = %d\n",loop);
 	
 	
 }
