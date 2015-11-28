@@ -7,6 +7,8 @@ main(){
 
 	printf("%d\n",a_count);
 
-	printf("%d", a_count < 'z'); 	
+	printf("%d\n", a_count != 'z'); 	
+	++a_count;
+	printf("%d",a_count);
 
 }
