@@ -2,16 +2,11 @@
 #include <stdbool.h>
 
 main(){
-	
-	int a;
-	int z;
-	int loop = 0;
-	while ( z >=a );
-	printf("%d\n",'a');
-	printf("%d\n",'z');
-	++a;
-	++loop;
-	printf("loop value = %d\n",loop);
-	
-	
+
+	int a_count = 'a';
+
+	printf("%d\n",a_count);
+
+	printf("%d", a_count < 'z'); 	
+
 }
