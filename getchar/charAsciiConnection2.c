@@ -4,9 +4,10 @@
 main(){
 
 	int  a_count = 'a';
+	int z_count = 'z';
 
-	while (a_count <= ('z'+5)){ 	
-	printf("%c, ",a_count);
+	while (a_count <= z_count){ 	
+	printf("%c\n",a_count);
 	++a_count;
  }
 
