@@ -3,7 +3,7 @@
 main(){
 
 	printf("Press Enter to continue: ");
-	c=getchar();
+	int c = getchar();
 	while (c != EOF)
 	printf("%d\n",c);
 	c = c +1;
