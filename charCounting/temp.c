@@ -5,8 +5,9 @@ main(){
 	long nc;
 	nc = 0;
 	while (getchar() != EOF){
+
+	printf("\n %ld", nc);	
 	++nc;
-	printf("%ld", nc);	
 	}
 
 }
