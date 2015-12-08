@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* count new lines  */
+/* count blanks, new lines and tabs  */
 
 main(){
 
@@ -7,7 +7,7 @@ main(){
 	spacingElement = 0;
 	
 	while ((c = getchar()) !=EOF)
-	if (c == '\n' || c == '\s ' || c == '\t' || c ==' '){
+	if (c == '\n' || c == '\t' || c =='\b'){
 	++spacingElement;
 	printf("new live value = %d\n",spacingElement);
 }
