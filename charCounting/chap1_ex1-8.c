@@ -7,7 +7,7 @@ main(){
 	spacingElement = 0;
 	
 	while ((c = getchar()) !=EOF)
-	if (c == '\n' || c == '\t' || c =='\b'){
+	if (c == '\n' || c == '\t' || c ==' '){
 	++spacingElement;
 	printf("new live value = %d\n",spacingElement);
 }

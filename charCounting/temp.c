@@ -3,13 +3,13 @@
 
 main(){
 
-	int c, spacingElement;
-	spacingElement = 0;
-	
-	while ((c = getchar()) !=EOF)
-	if (c == '\n' || c == '\s ' || c == '\t' || c ==' '){
-	++spacingElement;
-	printf("new live value = %d\n",spacingElement);
+	int inputText;
+	while ((inputText=getchar()) != EOF){
+		putchar(inputText);
+		if ('	' == putchar(inputText)){
+
+		printf("new string %d",putchar(inputText));
+		}	
 }
-return 0;
+
 }
