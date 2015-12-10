@@ -1,7 +1,6 @@
 #include <stdio.h>
 int main(void)
 {
-
 	int blanks, tabs, newlines;
 	int c;
 	int done = 0;
@@ -15,27 +14,26 @@ int main(void)
 	{
 		c = getchar();
 		if(c == ' ')
-		++blanks;
+			++blanks;
 
 		if(c =='\t')
-		++tabs;
+			++tabs;
 
 		if(c =='\n')
-		++newlines;
+			++newlines;
 		
 		if( c == EOF)
-		{
-		if (lastchar != '\n')
-		{
-		++newlines;
-		}
-		done = 1;
-
-	}	
+			{
+			if (lastchar != '\n')
+				{
+				++newlines;
+				}
+			done = 1;
+			}	
 	lastchar =c;
-}
+	}
 
-printf("Blanks %d\nTabs %d\nLines %d\n,blanks %d\n",blanks,tabs,newlines);
+printf("Blanks: %d\nTabs: %d\nLines: %d\n",blanks,tabs,newlines);
 return 0;
 }
 
