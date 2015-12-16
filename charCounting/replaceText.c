@@ -3,15 +3,18 @@
 
 main(void){
 
-int c, bs,nl,t ;
+int c;
+int s,t,nl;
+s = t = nl = 0;
+
 while ((c = getchar()) != EOF){
-	if (c ==' ')
-	++bs;
 	if (c =='\n')
 	++nl;
 	if (c =='\t')
 	++t;
+	if (c ==' ')
+	++s;
 }
-	printf("%d, %d, %d", bs,nl,t);
-
+	printf("\nblank space =%d\n tabs= %d\n new lines = %d\n",s,t,nl);
+	return 0;
 }
