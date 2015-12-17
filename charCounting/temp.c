@@ -1,11 +1,4 @@
-#if(c == EOF){
-                        if(lastchar != '\n')
-                        {
-                                ++newlines;
-                        }
-                done = 1;
-                }
-nclude <stdio.h>
+#include <stdio.h>
 
 main(void)
 {
