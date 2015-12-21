@@ -21,9 +21,8 @@ int main()
 	if (c == '\b') {
 	putchar('\\');
 	putchar('b');
-	}
 	d = 1;
-
+	}
 	if (d == 0)
 		putchar(c);
 	}
