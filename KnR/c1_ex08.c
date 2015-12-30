@@ -10,17 +10,17 @@ int main(void)
 
 	while ((c =getchar()) != EOF)
 	{
-	if (c ==' '){
-	++blanks;
-	}
+		if (c ==' '){
+		++blanks;
+		}
 
-	if (c == '\t'){
-	++tabs;
-	}
+		if (c == '\t'){
+		++tabs;
+		}
 
-	if (c == '\n'){
-	++newlines;
-	}
+		if (c == '\n'){
+		++newlines;
+		}
 	}
 	printf("blanks = %d \n\n tabs = %d \n\n newlines = %d \n\n", blanks, tabs, newlines);
 
