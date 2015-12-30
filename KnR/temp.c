@@ -1,30 +1,35 @@
 #include <stdio.h>
 
-int main(){
-
-	int c, blanks, tab, newline;
-	blanks = 0;
-	tab = 0;
-	newline = 0;
-
+int main()
+	{
+	int c,d;
 	
-	while ((c = getchar()) != EOF) {
-		
-		if ( c == ' ')	{
-			++blanks;
-		}
+	while (( c = getchar()) != EOF) {
 
-		if ( c == '\t') {
-			++tab;
-		}
+	d = 0;
+	if (c == '\\') {
+	putchar('\\');
+	putchar('\\');
 
-		if ( c == '\n') {
-			++newline;
-		}
+	d =1;
 
-		}
-		printf("\n blanks = %d \n tab = %d \n newline = %d \n", blanks, tab, newline);
+	}	
+	if (c == '\t') {
+	putchar('\\');
+	putchar('t');
+	d =1;
+	}
 	
+	if (c == '\b') {
+	putchar('\\');
+	putchar('b');
+	d =1;
+	}
+	
+	if (d == 0)
+	putchar(c);
+	}
 	return 0;
-
 }
+	
+	
