@@ -1,35 +1,21 @@
 #include <stdio.h>
 
-int main()
-	{
-	int c,d;
-	
-	while (( c = getchar()) != EOF) {
+int main(){
 
-	d = 0;
-	if (c == '\\') {
-	putchar('\\');
-	putchar('\\');
 
-	d =1;
+	int c, inspace;
+	inspace = 0;
 
-	}	
-	if (c == '\t') {
-	putchar('\\');
-	putchar('t');
-	d =1;
-	}
-	
-	if (c == '\b') {
-	putchar('\\');
-	putchar('b');
-	d =1;
-	}
-	
-	if (d == 0)
-	putchar(c);
-	}
-	return 0;
-}
-	
-	
+	while ((c = getchar()) != EOF){
+
+		if (c == ' ') {
+			if (inspace = 1){
+				putchar('\\');
+				putchar('\b');
+				inpace = 0;
+				}
+			}
+
+		if (c != ' '){
+			
+			
