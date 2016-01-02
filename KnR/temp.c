@@ -10,12 +10,18 @@ int main(){
 
 		if (c == ' ') {
 			if (inspace = 1){
+				inspace = 0;
 				putchar('\\');
 				putchar('\b');
-				inpace = 0;
 				}
 			}
 
 		if (c != ' '){
+			inspace = 1;
+			putchar(c);
+				}
+			}
+	return 0;
+}
 			
 			
