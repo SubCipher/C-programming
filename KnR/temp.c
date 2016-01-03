@@ -9,10 +9,10 @@ int main(){
 	while ((c = getchar()) != EOF){
 
 		if (c == ' ') {
-			if (inspace = 1){
+			if (inspace == 1){
 				inspace = 0;
 				putchar('\\');
-				putchar('\b');
+				putchar('b');
 				}
 			}
 
