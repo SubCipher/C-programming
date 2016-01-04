@@ -1,4 +1,4 @@
-#f (c != ' '){include <stdio.h>
+#include <stdio.h>
 
 int main(){
 
@@ -14,13 +14,22 @@ int main(){
 				putchar('\\');
 				putchar('b');
 				}
-			}
+			if (c == '\t') {
+				putchar('\\');
+				putchar('t');
+				}
+			if (c == '\n'){
+				putchar('\\');
+				putchar('n');
 
-		if (c != ' '){
-			inspace = 1;
-			putchar(c);
 				}
 			}
+		if (c != ' ' || c != '\t' || c != '\n'){
+				inspace = 1;
+				putchar(c);
+				}
+	
+	}
 	return 0;
 }
 			
