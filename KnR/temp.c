@@ -1,4 +1,4 @@
-#include <stdio.h>
+#f (c != ' '){include <stdio.h>
 
 int main(){
 
