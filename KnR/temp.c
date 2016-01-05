@@ -3,33 +3,16 @@
 
 int main(){
 
-
-	int c, d;
+	int c;
+	int charCount;
+	charCount = 0;
 	
-
 	while ((c = getchar()) != EOF){
 
-		if (c == ' ' ) {
-			putchar('\\');
-			putchar('b');
-			d = 1;
+		if (c != ' ' || c != '\b' || c != 'n'){
+			++charCount;
 			}
-		if (c == '\t') {
-			putchar('\\');
-			putchar('t');
-			d = 1;
-			}
-		if (c == '\n'){
-			putchar('\\');
-			putchar('n');
-			d = 1;				
-		}	
-
-		if (d == 0)
-			putchar(c);
-			
-	}
-	return 0;
+		}		
+		printf("the total number of characters = %d\n", charCount);
+return 0;
 }
-			
-			
