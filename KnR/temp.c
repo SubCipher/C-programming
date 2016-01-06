@@ -1,18 +1,21 @@
 #include <stdio.h>
 
-
 int main(){
 
-	int c;
-	int charCount;
-	charCount = 0;
-	
+	int c, nword;
+	nword = 0;
 	while ((c = getchar()) != EOF){
+		if (c != '\b' || c != '\t'){
+		putchar(c);
+		}
+		if ( c == ' ' || c == '\t'){
+			putchar('\n');
+			++nword;
+		}
+	}	
+	printf("word count = %d\n", nword);
 
-		if (c != ' ' || c != '\b' || c != 'n'){
-			++charCount;
-			}
-		}		
-		printf("the total number of characters = %d\n", charCount);
 return 0;
+
+
 }
