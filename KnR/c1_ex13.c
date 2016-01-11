@@ -3,25 +3,25 @@
 
 int main(){
 	
-	int c,i,bSpace, tSpace,nLine;
+	int c,i,l;
 	c = 0;
-	int numOfLetters;
-	numOfLetters = 0;
-	int letterCount[10];			
-
-	nLine = tSpace = bSpace = numOfLetters;
+	int wordLen;
+	wordLen =  0;
+	l = 0;
+	int wordLetterCount[10];			
 
 	for(i = 0; i < 10; i++)
-		letterCount[i] = 0;
+		wordLetterCount[i] = 0;
 
 	while ((c = getchar()) != EOF){
 		if (c != ' ' || c != '\t' || c != '\n')
-		numOfLetters++;
+			wordLen++;
 		else 
-			( letterCount[i] = numOfLetters);
-			numOfLetters = 0;	
-
-		}		
-	printf("number of letters array  %d" , letterCount[0]);
-
+		for (i=0; i< 10; i++)		
+		wordLetterCount[i] = wordLen;
+			wordLen = 0;	
+			l++;
+		
+		printf(" %d", wordLetterCount[i]);
+	}
 }
