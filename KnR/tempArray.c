@@ -10,9 +10,9 @@ int main(){
 		for(i = 0; i < 10; i++){
 			numArray[i] = c++;
 
-		printf("numArray %d\n", numArray[i]);
+		printf("%d\n", numArray[i]);
 
 		}	
 	}
-
+	return 0;
 }
