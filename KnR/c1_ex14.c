@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 #define IN 1 /* inside a word */
 #define OUT 0 /* outside a word */
 
@@ -31,11 +32,11 @@ int main(){
 		}
 		numOfLetters[nw-1] = nc;
 	
-		}
-	printf("%d %d\n numOfLetters= %d\n", nw, nc,numOfLetters[nw]);
-	for (i = 0;  i < 15; ++i)
-	wlen = 0;
 
+	for (i = 0; i < 15 ; ++i)
+	if (numOfLetters[i] > 0)
+		printf (" %d\n ",numOfLetters[i]);
+	}
 
 }
 
