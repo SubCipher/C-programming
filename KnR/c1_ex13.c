@@ -10,18 +10,24 @@ int main(){
 
 	int wordLetterCount[10];			
 	for(i = 0; i < 10; ++i)
-		wordLetterCount[i] = 9;
+		wordLetterCount[i] = 0;
 
 	while ((c = getchar()) != EOF){
-		if (c != ' ' || c != '\t' || c != '\n')
+		if (c != ' ' || c != '\t' || c != '\n'){
 			++wordLen;
+			}
 
-		else if ( c == ' ' || c == '\t' || c == '\n')
-			 wordLetterCount[l] = wordLen;
+		if ( c == ' ' || c == '\t' || c == '\n'){
+			for(i = 0; i < 10; ++i)
+			wordLetterCount[l] = wordLen;
 			wordLen = 0;	
 			++l;
 		}
+	}
 	for( i = 0; i < 10; ++i)
-		printf(" %d\n", wordLetterCount[i]);
-		
+		if (wordLetterCount[i] < 0)
+			printf(" *\n");
+			
+			
+	
 }
