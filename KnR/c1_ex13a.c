@@ -45,8 +45,11 @@ int main(){
 		//print results with for loop
 	for( i = 0; i < 10; ++i)
 		if (wordLetterCount[i] > 0)
-		printf("the number of letters in word %d is %d\n", i,wordLetterCount[i]);
+		
+			while (wordLetterCount[i] > 0){
+			printf("*");
+			wordLetterCount[i] = (wordLetterCount[i] -1);
 			
-			
+	}			
 	
 }
