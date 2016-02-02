@@ -48,6 +48,7 @@ int main(){
 		
 			while (wordLetterCount[i] > 0){
 			printf("*");
+			if (wordLetterCount
 			wordLetterCount[i] = (wordLetterCount[i] -1);
 			
 	}			
