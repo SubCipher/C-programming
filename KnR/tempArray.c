@@ -22,9 +22,10 @@ int main(){
 			charCount = 0;
 			loopCount++;
 		}
+
 		}
 		for(i =0; i < 10; i++){
-			if (numArray[i] > 0){
+			if (numArray[i] == 0){
 			printf("array value = %d\n", numArray[i]);
 			}	
 		}
