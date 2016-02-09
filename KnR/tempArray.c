@@ -17,17 +17,21 @@ int main(){
 			charCount++;
 			}
 
-		else if(c == ' ' || c == '\n'){
+		if(c == ' ' || c == '\n'){
 			numArray[loopCount] = charCount;
 			charCount = 0;
 			loopCount++;
 		}
 
 		}
+		int j = 0;
 		for(i =0; i < 10; i++){
-			if (numArray[i] == 0){
-			printf("array value = %d\n", numArray[i]);
-			}	
+			if (numArray[i] > 0){
+				for (j = 0; j < numArray[loopCount]; j++){
+			printf("*");
+			}
+		//	printf("array value = %d\n", numArray[i]);
+		}	
 		}
 	return 0;
 
