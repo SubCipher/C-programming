@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main(){
 
 	int i, c;
@@ -26,11 +27,12 @@ int main(){
 		}
 		int j = 0;
 		for(i =0; i < 10; i++){
-			if (numArray[i] > 0){
-				for (j = 0; j < numArray[loopCount]; j++){
-			printf("*");
+			if (numArray[loopCount] > 0){
+				for (j = 0; j < numArray[i]; j++){
+			printf("*\n");
+	
 			}
-		//	printf("array value = %d\n", numArray[i]);
+		//printf("array value = %d\n", numArray[i]);
 		}	
 		}
 	return 0;
