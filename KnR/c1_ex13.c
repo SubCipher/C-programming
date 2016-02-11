@@ -1,52 +1,70 @@
 #include <stdio.h>
 
-int main(){
+int main {
+
+int c;
+int inpace = 0;
+long lengthArray[maxWordLen + 1];
+int wordLen = 0;
 
 
-	// declare variable
-	int i;
-	int c;
-	int wordLen = 0;
-	int l = 0;
+int firstLetter = 1;
+long thisVal = 0;
+long maxVal = 0;
+int thisIDx = 0;
+int done = 0;
 
-	// declare an array with capacity of 10 
-	int wordLetterCount[10];		
-	
-	// initialize array with for loop and val of 0 
-	for(i = 0; i < 10; ++i)
-		wordLetterCount[i] = 0;
+	for(thisIDx = 0; thisIDx <= maxWordlen; thisIDx++)
+	{
+		lengthArray[thisIDx] = 0;
+	}
+	while(done == 0)
+	{
+		c = getchar();
+		if(c == ' ' | c == '\t' || c == '\n' || c == EOF)
+		{
+			if(inspace == 0)
+			{
+				firstLetter = 0;
+				inspace = 1;
+			if(wordLen <= maxWordLen)
+			{
+
+				if (wordLen > 0)
+					{ 
+						thisVal = ++lengthArray[wordLen -1];
+						if(thisVal > maxVal)
+						{
+							maxVal = thisVal;
+						}
 
 
-	// check for white spaces 
-	while ((c = getchar()) != EOF){
-		if (c != ' ' || c != '\t' || c != '\n'){
-
-	// if there is no white space keep count characters 
-			++wordLen;
-			}
-
-		//check for white spaces 
-		if ( c == ' ' || c == '\t' || c == '\n'){
 
 
-		// if white spaces found, add val of wordLen to array
-			for(i = 0; i < 10; ++i)
-			wordLetterCount[l] = wordLen;
 
-		//reset wordLen 
-			wordLen = 0;
 
-		//increase val of l to move to next position in array
-			++l;
-		}
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
 	}
 
 
-		//print results with for loop
-	for( i = 0; i < 10; ++i)
-		if (wordLetterCount[i] > 0)
-		printf("the number of letters in word %d is %d\n", i,wordLetterCount[i]);
-			
-			
-	
+
+
+
+
 }
+
+
