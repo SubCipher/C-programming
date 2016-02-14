@@ -1,29 +1,15 @@
 #include <stdio.h>
 
-#define IN 1 /* inside a word */
-#define OUT 0 /* outside a word */
+int main(){
 
-/* count lines, words, and characters in input */
+	int tooCold = 0;
+	int temp = 32;
 
-int main() {
+	while (tooCold < temp){
 
-	int c, nl, nw, nc, state;
+	printf("too cold");
+	tooCold++;
+	}
+	return 0;
 
-	state = OUT;
-	nl = nw = nc = 0;
-
-	while ((c = getchar()) != EOF) {
-		++nc;
-		
-		if(c == '\n')
-			++nl;
-		
-		if(c == ' ' || c == '\n' || c == '\t')
-			state = OUT;
-		else if (state == OUT) {
-			state = IN;
-			++nw;
-			}
-		}
-		printf("%d %d %d\n", nl, nw, nc);
-}	
+}
