@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-int main {
+int main(void)
+ {
 
-int c;
-int inpace = 0;
-long lengthArray[maxWordLen + 1];
-int wordLen = 0;
+	int c;
+	int inpace = 0;
+	long lengthOfArray[maxWordLen + 1];
+	int wordLen = 0;
 
 
-int firstLetter = 1;
-long thisVal = 0;
-long maxVal = 0;
-int thisIDx = 0;
-int done = 0;
+	int firstLetter = 1;
+	long thisVal = 0;
+	long maxVal = 0;
+	int thisIdx = 0;
+	int done = 0;
 
-	for(thisIDx = 0; thisIDx <= maxWordlen; thisIDx++)
+	for(thisIdx = 0; thisIdx <= maxWordlen; thisIDx++)
 	{
 		lengthArray[thisIDx] = 0;
 	}
