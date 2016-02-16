@@ -15,3 +15,5 @@ To continue we need to erase the disk at /Volumes/LexarUSB1.
 If you wish to continue type (Y) then press return: 
 
 radio interview BCI and XQ
+
+Test edit by mobile user from iPhone.  (Site version: desktop)
