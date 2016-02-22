@@ -14,13 +14,13 @@ int main(){
 	int nc = 0;
 
 
-	for(i = 0; i <= MAXWORDLENl ++i)
+	for(i = 0; i <= MAXWORDLEN; ++i)
 		arrayOfLength[i] = 0;
 		
 	while ((c = getchar()) != EOF){
 		++nc;
 
-		if(( c == ' ' || c == '\t' || c == '\n'){
+		if( c == ' ' || c == '\t' || c == '\n' || c == '.'){
 			state = OUT;
 			--nc;
 			}
