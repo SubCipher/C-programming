@@ -50,11 +50,24 @@ int main(){
 	//print results with for loop
 	for( i = 0; i < 10; ++i){
 		printf("%2d | ",i);
-		for(j = 0; j < wordLetterCount[i]; ++j)
-		putchar('*');
-	putchar ('\n');
+		//printf("%d", wordLetterCount[i]);
 
-	}
+		while (l < 10){
+
+			for( j = 0 ; j < 10; ++j){
+				if(wordLetterCount[j] == l){
+				wordLetterCount[j] = l;
+			}		
+		}
+		l++;
+
+
+		printf("%d", wordLetterCount[i]);
+		printf("\n");
+
+}
+}
+	
 /*
 		for(j = 0; j < wordLetterCount[i]; ++j)
 			if(wordLetterCount[i] == j){
