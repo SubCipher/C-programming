@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+#define MAXWORDLEN 10
+
 int main(){
 
 
@@ -11,7 +13,7 @@ int main(){
 	int j = 0;
 
 	// declare and initilize array
-	int wordLetterCount[10];		
+	int wordLetterCount[MAXWORDLEN +1];		
 	
 	for(i = 0; i < 10; ++i)
 		wordLetterCount[i] = 0;
@@ -31,7 +33,7 @@ int main(){
 		if ( c == ' ' || c == '\t' || c == '\n')
 		{
 			for(i = 0; i < 10; ++i)
-			wordLetterCount[l] = wordLen;
+			wordLetterCount[l] = wordLen-1;
 
 			//reset wordLen 
 			wordLen = 0;
@@ -42,26 +44,30 @@ int main(){
 	}
 	
 	//print results with for loop
-//	for(i = 0; i < 10; ++i){
-		//printf("%2d | ",i);
-		//printf("%d", wordLetterCount[i]);
-	
-		while(j < 10){
-			for(i = 0; i < 10; ++i){
-			printf("%2d | ",i);
-			if(j != wordLetterCount[i]){
+	while(j < MAXWORDLEN){
+			for (j = 0 ; j < MAXWORDLEN; ++j){
+			printf("%2d | ", j);
+			//printf("%d", wordLetterCount[j]);
+			int l1 =0;
+				while (l1 < MAXWORDLEN){
+					int l2 = 0;
+					while(l2 < MAXWORDLEN){
+						if (l1 == wordLetterCount[l2])
+							{
+							putchar('*');
+							}
+					l2++;
+					}
+				
+				l1++;
 				putchar('\n');
 
+				}
+
 			}
-			else if(j == wordLetterCount[i]){
-			
-			putchar('*');
-			putchar('\n');
-			}
-	
+
+
 		}
-	j++;
-	}
-return 0;
+		return 0;
 		
-}
+	}
