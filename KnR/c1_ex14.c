@@ -1,43 +1,121 @@
 #include <stdio.h>
 
+#define NUM_CHARS 256
 
-#define IN 1 /* inside a word */
-#define OUT 0 /* outside a word */
+int main(void)
+{
+	int c;
+	long freqArray[NUM_CHARS + 1];
+	long thisVal = 0;
+	long maxVal = 0;
+	int indexID = 0;
 
 
+	//step0
 
-
-int main(){
-
-	int i, c, nw, nc, state, wlen;
-	int numOfLetters[15];
-	state = OUT;
-	nw = nc = 0;
-
-	for (i = 0; i < 15; ++i)
-		numOfLetters[i] = 0;
-
-	while ((c = getchar()) != EOF) {
-
-	++nc;
-
-	if (c == ' ' || c == '\n' || c == '\t')
-		state = OUT;
-
-	else if (state == OUT) {
-		state = IN;
-		++nw;
-		nc = 0;
-		
-		}
-		numOfLetters[nw-1] = nc;
-	
-
-	for (i = 0; i < 15 ; ++i)
-	if (numOfLetters[i] > 0)
-		printf (" %d\n ",numOfLetters[i]);
+	for(indexID = 0; indexID <= NUM_CHARS; indexID++)
+	{	
+		freqArray[indexID] = 0;
 	}
 
+	//step1
+
+	while((c = getchar()) != EOF)
+	{
+		if(c < NUM_CHARS)
+		{
+			thisVal = ++freqArray[c];
+			if(thisVal > maxVal)
+			{
+				maxVal = thisVal;
+			}
+		}
+		else
+		{
+			thisVal = ++freqArray[NUM_CHARS];
+			if(thisVal > maxVal)
+			{
+				maxVal = thisVal;
+			}
+		}
+	}
+
+	//step2
+
+	for(thisVal = maxVal; thisVal > 0; thisVal--)
+	{
+		printf("%4d |", thisVal);
+		for(indexID = 0; indexID <= NUM_CHARS; indexID++)
+		{
+			if(freqArray[indexID] >= thisVal)
+			{
+				printf("*");
+			}
+			else if(freqArray[indexID] > 0)
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+	}
+	printf("       +");
+	
+	//step3
+
+	for(indexID = 0; indexID <= NUM_CHARS; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+			{
+				printf("-");
+			}
+		}		
+	printf("\n       ");
+	
+	//step4
+
+	for(indexID = 0; indexID < NUM_CHARS; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+		{
+			printf("%d", indexID / 100);
+		}
+	}
+	printf("\n       ");
+
+	//step5
+
+	for (indexID = 0; indexID < NUM_CHARS; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+		{
+			printf("%d", (indexID - (100 * (indexID /100))) /10 );
+		}
+	}
+	printf("\n       ");
+
+	//step6
+
+	for(indexID = 0; indexID < NUM_CHARS ; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+		{
+			printf("%d", indexID - (10 * (indexID /10)));
+		}
+	}
+
+	//step7
+	
+	if(freqArray[NUM_CHARS] > 0)
+	{
+		printf(">%d\n", NUM_CHARS);
+	}
+	printf("\n");
+
+	return 0;
 }
+	
+
+
+
 
 

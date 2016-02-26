@@ -36,20 +36,28 @@ int main(){
 			}
 		}
 
+		int ol = 0 ;
+		int il = 0 ;
 
-		while(l2 < MAXWORDLEN){
-			for(i = 0; i < MAXWORDLEN ; ++i){
-				if(l2 == wordLenArray[i]){
-				printf("%2d | ",i);
-				putchar('*');
-				printf("\n");
-				}
+		//for( i = 0; i < MAXWORDLEN; ++i){
+		while (ol < MAXWORDLEN){
+			for (i = 0; i < MAXWORDLEN ; ++i){
+				if(ol != wordLenArray[i]){
+					printf("%2d | ",i);
+					putchar('-');
+					printf("\n");
+					}
+				else if(ol == wordLenArray[i])
+					{
+					printf("%2d | ", i);
+						putchar('*');
+						putchar('\n');
+					}
+			++ol;
+			
+			}					
 
 			}
-
-			++l2;
-		}			
-					
 return 0;
 
 }
