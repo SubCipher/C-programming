@@ -36,6 +36,7 @@ int main(void)
 			if(thisVal > maxVal)
 			{
 				maxVal = thisVal;
+				printf("maxVal: %ld", maxVal);
 			}
 		}
 	}
