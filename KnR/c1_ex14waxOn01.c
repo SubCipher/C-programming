@@ -49,9 +49,15 @@ int main(void)
 		printf("freqArray=> %c: %d\n", freqArray[i],freqArray[i]);
 		}
 	}
+<<<<<<< HEAD
 		printf("NUM_CHARS = %d", NUM_CHARS);
 	
 return 0;
 
 }
 
+=======
+return 0;
+
+}
+>>>>>>> ecec8309c59fd65db5570b88e726aeda7eb16d37
