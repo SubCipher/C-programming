@@ -1,17 +1,25 @@
 #include <stdio.h>
+#define NUM_CHARS 256
 
+int main(void){
 
-int main(){
+	int c;
+	long currentCharVal = 0;
+	long maxCharVal = 0;
+	int i;
 
+	long freqArray[NUM_CHARS + 1];
+	int indexID= 0;
 	
-	int tooCold = 0;
-	int temp = 32;
 
-	while (tooCold < temp){
+	c = getchar();
 
-		printf("too cold");
-		tooCold++;
+	for( indexID = 0 ; indexID < NUM_CHARS; indexID++){
+		freqArray[indexID]=0;
 		}
-	return 0;
+	currentCharVal = ++freqArray[c];
+	printf("%d", currentCharVal);
+
+return 0;
 
 }
