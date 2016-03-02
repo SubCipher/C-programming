@@ -18,7 +18,16 @@ int main(void){
 		freqArray[indexID]=0;
 		}
 	currentCharVal = ++freqArray[c];
-	printf("%d", currentCharVal);
+	if (freqArray[indexID] > 0){
+	printf("indexID=%d \n indexID array value= %d\n", indexID,freqArray[c]);
+	}
+	
+/*
+	for (i = 0; i < NUM_CHARS; ++i)
+
+	{printf("arrayValues: %d   ",freqArray[i]);
+	}
+*/
 
 return 0;
 
