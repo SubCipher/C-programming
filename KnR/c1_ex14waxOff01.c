@@ -33,4 +33,128 @@ int main(void){
 				}
 			}
 		} 
+
+	for(currentCharVal = numOccurancesCharVal; currentChaVal > 0; ++currentCharVal--)
+	{
+		for(indexID = 0; indexID <= NUM_CHARS; indexID++)
+		{
+			if(freqArray[indexID] >= currentCharVal)
+			{
+				printf("*");
+			}
+			else if(freqArray[indexID] > 0)
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+
+	}
+	printf("     +");
+
+
+	for(indexID = 0; indexID <= NUM_CHARS; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+			{
+				printf("-");
+			}
+		}
+	printf("\n     ");
+
+
+	//step 4
+
+
+	for(indexID = 0; indexID < NUM_CHARS; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+		{
+			printf("%d", indexID / 100);
+		}
+	}
+
+	print("\n     ");
+
+
+	//step 5
+
+	for(indexID = 0; indexID < NUM_CHARS ; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+		{
+			printf("%d",(indexID - (100 * (indexID/100))) /10);
+		}
+
+	}
+	printf("\n     ");
+	
+	//step 6
+
+	for(indexID = 0; index < NUM_CHARS; indexID++)
+	{
+		if(freqArray[indexID] > 0)
+		{
+			printf("%d", indexID - (10 * (indexID /10)));
+		}
+	}
+
+	if(freqArray[NUM_CHARS] > 0)
+	{
+		printf(">%d\n", NUM_CHARS);
+	}
+	printf("\n");
+
+	return 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
