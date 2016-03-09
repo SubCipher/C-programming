@@ -34,7 +34,8 @@ int main(void){
 			}
 		} 
 
-	for(currentCharVal = numOccurancesCharVal; currentChaVal > 0; ++currentCharVal--)
+	//step 2
+	for(currentCharVal = numOccurancesCharVal; currentCharVal > 0; currentCharVal--)
 	{
 		for(indexID = 0; indexID <= NUM_CHARS; indexID++)
 		{
@@ -52,7 +53,7 @@ int main(void){
 	}
 	printf("     +");
 
-
+	//step 3
 	for(indexID = 0; indexID <= NUM_CHARS; indexID++)
 	{
 		if(freqArray[indexID] > 0)
@@ -74,7 +75,7 @@ int main(void){
 		}
 	}
 
-	print("\n     ");
+	printf("\n     ");
 
 
 	//step 5
@@ -106,55 +107,6 @@ int main(void){
 	printf("\n");
 
 	return 0;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
