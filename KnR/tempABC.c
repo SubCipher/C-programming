@@ -2,14 +2,14 @@
 
 int main(){
 
-	int aaron;
-	aaron = getchar();
+	int c;
+	c = getchar();
 
-	//while ( aaron  !=  'z'+1){
-	while (aaron != EOF) {
-	printf("\n the ascii value of %c is %d",aaron,aaron);
-	++aaron;
-	if (aaron > 'z'){
+	while (c  !=  'z'+1){
+	//while (c != EOF) {
+	printf("\n the ascii value of %c is %d",c,c);
+	c =  c ++;
+	if (c > 'z'){
 	printf("\n");
 	}
 	}

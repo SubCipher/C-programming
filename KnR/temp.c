@@ -3,13 +3,15 @@
 int main(void){
 
 	int c;
-	c = getchar();
 	int i;
-	for(i = 0; i < 26; ++i)
+	c = getchar();
+
+	while(c  < 'z' )
 	{
-		printf("\n alphaNumeric value = %c, %d", c, c);
-		c = ++c;
+		printf("\nalphaNumeric values: %c, %d\n", c,c);
+		++c;
 	}
+
 return 0;
 
 }
