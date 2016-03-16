@@ -36,12 +36,13 @@ int main(void)
 
 		}
 	}
+	
 	int i =0;
 	for(i = 0; i <= NUM_CHARS; ++i)
 	{
 		if(freqArray[i] > 0)
 		{
-			printf("\nAlphaNumeric Values: %c, %d\n", freqArray[i], freqArray[i]);
+			printf("\nAlphaNumeric Values: %c, %d\n", freqArray[c], freqArray[i]);
 		}
 	}
 return 0;
