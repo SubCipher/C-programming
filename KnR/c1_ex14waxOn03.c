@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #define NUM_CHARS 256
 
@@ -6,9 +5,9 @@ int main(void)
 	{
 
 	int c;
-	int indexID;
-	long currentCharVal;
-	long maxCharVal;
+	int indexID = 0;
+	long currentCharVal = 0;
+	long maxCharVal = 0;
 	long freqArray[NUM_CHARS +1];
 	
 	for(indexID = 0; indexID <= NUM_CHARS; ++indexID)
@@ -35,10 +34,10 @@ int main(void)
 			}
 
 		}
-	}
 	
+	}
 	int i =0;
-	for(i = 0; i <= NUM_CHARS; ++i)
+	for(i = 0; i < NUM_CHARS; ++i)
 	{
 		if(freqArray[i] > 0)
 		{
@@ -47,7 +46,3 @@ int main(void)
 	}
 return 0;
 }
-
-
-
-
