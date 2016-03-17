@@ -11,20 +11,20 @@ int main(void){
 
 	long freqArray[NUM_CHARS +1];
 	for(indexID =0; indexID <= NUM_CHARS; ++indexID)
-	{
-		freqArray[indexID] = 0;
-	}
+		{
+			freqArray[indexID] = 0;
+		}
 
 	while((c = getchar()) != EOF)
 	{
 		if(c < NUM_CHARS)
-		{
-			currentCharVal = ++freqArray[c];
-			if(currentCharVal > maxCharVal)
 			{
-				maxCharVal = currentCharVal;
+				currentCharVal = ++freqArray[c];
+				if(currentCharVal > maxCharVal)
+					{
+						maxCharVal = currentCharVal;
+					}
 			}
-		}
 		else
 			{ 
 				currentCharVal = ++freqArray[NUM_CHARS];

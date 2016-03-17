@@ -41,8 +41,9 @@ int main(void)
 	{
 		if(freqArray[i] > 0)
 		{
-			printf("\nAlphaNumeric Values: %c, %d\n", freqArray[c], freqArray[i]);
+			printf("\nAlphaNumeric Values: %d, %c\n", freqArray[currentCharVal], freqArray[currentCharVal]);
 		}
 	}
+
 return 0;
 }
