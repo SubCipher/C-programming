@@ -1,57 +1,46 @@
 #include <stdio.h>
 
-#define NUM_CHARS 256
+#define MAXLINE 1000 /* maximum input line length */
 
-int main(void)
+int myGetline(char line[], int maxline);
+void copy(char to[], char from[]);
+/* print the longest input*/
+int main()
 {
-	//determine values
-	int c;
-	long freqArray[NUM_CHARS+1];
-	long currentCharVal = 0;
-	long maxCharVal = 0;
-	int indexID = 0;
+	int len;
+	int max;
+	char line[MAXLINE];
+	char longest[MAXLINE];
 
-
-	//step0 create array
-	for (indexID = 0; indexID <= NUM_CHARS; indexID++)
-		{
-			freqArray[indexID] = 0;
-		}
-
-	//step01
-
-	while ((c = getchar()) != EOF)
-		{
-			if (c < NUM_CHARS)
-				{
-				currentCharVal = ++freqArray[c];
-					if (currentCharVal > maxCharVal)
-						{
-							maxCharVal = currentCharVal;
-						}
-					}
-			else
-					{
-					currentCharVal = ++freqArray[NUM_CHARS];
-						if(currentCharVal > maxCharVal)
-						{
-							maxCharVal = currentCharVal;
-						}
-					}
-
-		}
-
-
-	int i = 0;
-	for ( i = 0; i  < NUM_CHARS; ++i)
-		{
-			if(freqArray[i] > 0 )
-			{
-				printf("\n");
-			printf("freqArray => %c: %d \n",freqArray[NUM_CHARS],freqArray[i]);
-		}
-
-	}
+	max = 0;
+	while ((len = myGetline(line, MAXLINE)) > 0)
+		if (len > max) {
+			max = len;
+			copy(longest, line);
+			}
+	if( max > 0 )
+		printf("%s", longest);
 	return 0;
-
+	}
+	/* getline: read a line into s, return length */
+	int myGetline(char s[],int lim)
+	{
+	int c, i;
+	for (i=0; i < lim-1 && (c=getchar())!=EOF && c!='\n'; ++i)
+		s[i] = c;
+	if (c == '\n')
+	{
+		s[i] = c;
+		++i;
+	}
+	s[i] = '\0';
+	return i;
+}
+/* copy: copy 'from' into 'to'; assume to is big enough */ 
+	void copy(char to[], char from[])
+{ 
+	int i;
+	i = 0;
+	while ((to[i] = from[i]) != '\0')
+	++i;
 }
