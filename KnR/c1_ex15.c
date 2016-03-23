@@ -3,7 +3,7 @@
 float FtoC (float f)
 	{
 		float c;
-		c = 5.0 / 9.0 * (f -32.0);
+		c =  9.0 / 5.0 * (f + 32.0);
 	return c;
 }
 
@@ -23,4 +23,5 @@ int main(){
 	printf("%d\t %d\n", fahr, celsius);
 	celsius = celsius + step;
 	}
-
+return 0;
+}
