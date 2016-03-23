@@ -1,45 +1,26 @@
 #include <stdio.h>
-#define MAXLINE 1000 /* maximum input line length */
+#include <stdlib.h>
 
-int myGetLine(char line[], int maxline);
-void copy(char to[], char from[]);
-/* print the longest input*/
+int input(char *s, int length);
+
 int main()
 {
-	int len;
-	int max;
-	char line[MAXLINE];
-	char longest[MAXLINE];
+	char *buffer;
+	size_t bufsize = 32;
+	size_t characters;
 
-	max = 0;
-	while ((len = myGetLine(line, MAXLINE)) > 0)
-		if (len > max) {
-			max = len;
-			copy(longest, line);
-			}
-	if( max > 0 )
-		printf("%s", longest);
-	return 0;
-	}
-	/* getline: read a line into s, return length */
-	int myGetLine(char s[],int lim)
+	buffer = (char *)malloc(bufsize * sizeof(char));
+	if(buffer == NULL)
 	{
-	int c, i;
-	for (i=0; i < lim-1 && (c=getchar())!=EOF && c!='\n'; ++i)
-		s[i] = c;
-	if (c == '\n')
-	{
-		s[i] = c;
-		++i;
+		perror("Unable to allocate buffer");
+		exit(1);
 	}
-	s[i] = '\0';
-	return i;
-}
-/* copy: copy 'from' into 'to'; assume to is big enough */ 
-	void copy(char to[], char from[])
-{ 
-	int i;
-	i = 0;
-	while ((to[i] = from[i]) != '\0')
-	++i;
-}
+
+	printf("Type something: ");
+	characters = getline( &buffer, &bufsize, stdin);	
+	printf("%zu characters were read. \n", characters);
+	printf("You typed: '%s'\n",buffer);
+
+	return(0);
+	}
+	
