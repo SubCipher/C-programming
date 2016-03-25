@@ -1,6 +1,7 @@
 #include <stdio.h>
-int main(void)
-{
+int main(void){
+
+
 	float fahr, celsius;
 	int lower, upper,step;
 	
@@ -8,15 +9,18 @@ int main(void)
 	upper = 300;
 	step = 20;
 
+	celsius = upper;
+
 	printf("\n\nTemperature Conversion Table \n\n");	
 	printf("C	F\n\n");
-	celsius  = upper;
-	while (celsius >= lower)
-	{
-	fahr = (9.0 / 5.0 ) * (celsius + 32.0);
-	printf("%3.0f %6.1f\n",	celsius, fahr);
-	celsius= celsius - step;
+
+	while (celsius >= lower){
+
+		fahr = (9.0 / 5.0 ) * (celsius + 32.0);
+		printf("%3.0f %6.1f\n",	celsius, fahr);
+		celsius = celsius - step;
 	}
-	return 0 ;
+
+return 0 ;
 }
 
