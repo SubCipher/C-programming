@@ -13,7 +13,8 @@ int main(){
 	char line[MAXLINE];
 	char longest[MAXLINE];
 	
-	while((len = myGetLine(line, MAXLINE)) > 0)
+	max = 0;
+	while((len = myGetline(line, MAXLINE)) > 0)
 		if(len > max) {
 			max = len;
 			printf("max val: %d",max);
