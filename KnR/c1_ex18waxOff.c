@@ -8,6 +8,7 @@ int main(){
 
 	int max;
 	int len;
+	int j;
 	char line[MAXLINE];
 	char longest[MAXLINE];
 
@@ -17,9 +18,10 @@ int main(){
 			max = len;
 			copy(longest,line);
 		}
-
+	
 	if(max > 0)
-		printf("this is the longest val: %s", longest);
+	
+		printf("this is the longest val: %s\n", longest);
 	return 0;
 
 	}
@@ -29,7 +31,7 @@ int main(){
 int myGetline(char s[], int lim){
 
 	int c, i;
-	for(i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+	for(i = 0; i < lim - 1 && (c = getchar()) != EOF; ++i)
 		s[i] = c;
 		if(c == '\n'){
 			s[i] = c;
@@ -43,6 +45,7 @@ int myGetline(char s[], int lim){
 		{
 			int i;
 			i = 0;
+
 			while(( to[i] = from[i]) != '\0')
 				++i;
 	}
