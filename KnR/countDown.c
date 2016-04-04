@@ -4,21 +4,22 @@
 
 int main(){
 
-	int loopCount;
 	int loopTrigger;
 	int triggerPoint;
 
 	triggerPoint = 10;
 	loopTrigger = 25;
 
-	while( loopCount < triggerPoint){
-		printf("loopTrigger: %d", loopTrigger);
-		loopTrigger--;
-
-		if(loopTrigger > triggerPoint && triggerPoint  > 0)
+	while( loopTrigger > 0){
+		printf("loopTrigger: %d    /\n", loopTrigger);
+		
+		loopTrigger --;
+		if(loopTrigger < triggerPoint && triggerPoint  > 0)
 			{
-				printf(" triggerPoint: %d", triggerPoint);	
+				printf(" triggerPoint: %d\n", triggerPoint);	
 				triggerPoint--;
 			}
-
+		}
+		
+return 0;
 }
