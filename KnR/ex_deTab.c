@@ -6,13 +6,13 @@ int main(){
 	inspace = 0;
 
 	while ((c = getchar()) != EOF) {
-		if (c ==' ' || c == '\t'){
+		if (c == '\t'){
 			if ( inspace == 0 ){
 				inspace = 1;
-				putchar(c);
+				c = '    ';
 			}
 		}
-		if(c != ' ' && c != '\t'){
+		if(c != '\t'){
 			inspace = 0;
 			putchar(c);
 		}
