@@ -11,13 +11,16 @@ int main(){
 	loopTrigger = 25;
 
 	while( loopTrigger > 0){
-		printf("loopTrigger: %d    /\n", loopTrigger);
+		printf("loopTrigger: %d    /", loopTrigger);
 		
 		loopTrigger --;
 		if(loopTrigger < triggerPoint && triggerPoint  > 0)
 			{
-				printf(" triggerPoint: %d\n", triggerPoint);	
+				printf("triggerPoint: %d\n", triggerPoint);	
 				triggerPoint--;
+			}
+		else{
+			printf("\n");
 			}
 		}
 		
