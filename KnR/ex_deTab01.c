@@ -7,11 +7,13 @@
 #define SPACE ' '
 #define TAB '\t'
 
+int myGetline(char this[], int that);
+
 int calculateNumberOfSpaces(int offset, int tabSize){
 	return tabSize - (offset % tabSize);
 	}
 
-int getline(char s[],int lim){
+int myGetline(char s[],int lim){
 	int c,i;
 	
 	for(i = 0; i < lim -1 && (c = getchar()) != EOF && c != '\n'; ++i)
@@ -29,8 +31,8 @@ int main(void){
 	int tabSize = 5;
 	int i, j, k, l;
 
-	while(getline(Buffer, MAX_BUFFER) > 0){
-		for(i = 0, 1 = 0; Buffer[i] != '\0'; i++){
+	while(myGetline(Buffer, MAX_BUFFER) > 0){
+		for(i = 0, l = 0; Buffer[i] != '\0'; i++){
 			if(Buffer[i] == TAB){
 			j = calculateNumberOfSpaces(1,tabSize);
 			for(k=0; k < j; k++){
