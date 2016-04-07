@@ -32,6 +32,8 @@ int main(void){
 	int i, j, k, l;
 
 	while(myGetline(Buffer, MAX_BUFFER) > 0){
+
+		printf("%(myGetline(Buffer,MAX_BUFFER = %d\n)",myGetline(Buffer,MAX_BUFFER));
 		for(i = 0, l = 0; Buffer[i] != '\0'; i++){
 			if(Buffer[i] == TAB){
 			j = calculateNumberOfSpaces(1,tabSize);
