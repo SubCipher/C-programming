@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#define TARGETSPACE '*'
 int main(){
 	
 	int c, inspace;
@@ -9,7 +9,7 @@ int main(){
 		if (c == '\t'){
 			if ( inspace == 0 ){
 				inspace = 1;
-				c = '    ';
+				c = TARGETSPACE;
 			}
 		}
 		if(c != '\t'){

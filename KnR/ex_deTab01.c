@@ -33,20 +33,20 @@ int main(void){
 
 	while(myGetline(Buffer, MAX_BUFFER) > 0){
 
-		printf("%(myGetline(Buffer,MAX_BUFFER = %d\n)",myGetline(Buffer,MAX_BUFFER));
+		printf("(myGetline(Buffer,MAX_BUFFER = %d\n)",myGetline(Buffer,MAX_BUFFER));
 		for(i = 0, l = 0; Buffer[i] != '\0'; i++){
 			if(Buffer[i] == TAB){
-			j = calculateNumberOfSpaces(1,tabSize);
-			for(k=0; k < j; k++){
-			putchar(SPACE);
-			l++;
+				j = calculateNumberOfSpaces(1,tabSize);
+				for(k=0; k < j; k++){
+					putchar(SPACE);
+					l++;
+				}
+			}
+			else{
+				putchar(Buffer[i]);
+				}
 			}
 		}
-		else{
-			putchar(Buffer[i]);
-			}
-		}
-	}
 	return 0;
 }
 			
