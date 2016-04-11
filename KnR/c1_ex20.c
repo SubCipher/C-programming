@@ -3,10 +3,7 @@
 #define SPACE ' '
 #define TAB '\t'
 #define MAXLIMIT 1024
-#define n 5
-
-
-//int myGetline(char s[], int MAXLIMIT);
+#define n 6.5
 
 
 int main(){
