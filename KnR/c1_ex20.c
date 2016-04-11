@@ -1,26 +1,37 @@
 #include <stdio.h>
 
-int main(){
-	
-	int c, inspace;
-	inspace = 0;
+#define SPACE ' '
+#define TAB '\t'
+#define MAXLIMIT 1024
+#define n 5
 
-	while ((c = getchar()) != EOF) {
-		if (c == '\t'){
-			if ( inspace == 0 ){
-				inspace = 1;
-				c = '    ';
+
+//int myGetline(char s[], int MAXLIMIT);
+
+
+int main(){
+
+	int i,c;
+	char s[MAXLIMIT];
+	for(i = 0; i < MAXLIMIT -1 && (c = getchar()) != EOF; ++i)
+		if(c == '\t'){
+			int j;
+			for(j = 0; j < n; ++j){
+				s[i] = SPACE;	
+				++i;
 			}
 		}
-		if(c != '\t'){
-			inspace = 0;
-			putchar(c);
-		}
-	}
+		else
+			{
+			s[i] = c;
+			}
 
-return 0;
+		s[i] = '\0';
 
+	int l;
+	for(l = 0; l < i ; ++l)
+		printf("%c", s[l]);
+
+	return 0;
 }
-		
 	
-
