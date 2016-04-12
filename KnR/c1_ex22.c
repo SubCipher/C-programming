@@ -23,16 +23,16 @@ int main(){
 			++i;
 			++wordCount; 
 			}
-		if(wordCount > 5 && s[i] ==' ' ){
-			s[i] = putchar('\n');
-
-			//s[i] ='\n';
+		if(wordCount == 5) {
+			//s[i] = putchar('\n');
+			wordCount = 0;
+			s[i] ="***";
 			}
 		}
 	
-	int j = 0;
-	for(j = 0; j < i ; ++j)
-		printf("%c",s[j]);
+
+
+		printf("%s",s);
 
 
 	printf("wordCount is %d\n",wordCount);
