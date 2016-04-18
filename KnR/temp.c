@@ -1,42 +1,46 @@
-#include <stdio.h>
+t#include <stdio.h>
 
 #define MAXLIM 1024
 
 int main(){
 
-	int c, wordCount;
-	int nonWordCount = 0;
-
+	int i,c;
 	int indexID;
+	int letterCount;
+	int otherCount;
+
 	char s[MAXLIM];
-	/*for( indexID = 0; indexID < MAXLIM; ++indexID){
-		s[indexID] = 0; *
+	/*for(indexID = 0; indexID < MAXLIM -1  ; ++indexID){
+		s[indexID] = ' ';
 
-		} */
+	} */
 
-	while((c = getchar()) != EOF){
+while(( c = getchar()) != EOF ){
+
+	if( c != ' ' || c != '\t' || c != '\n'){
+		
+		s[indexID] = c;
+		++indexID;
+		++letterCount;		
+		}
+
+
+	else{
+		s[indexID] = c;
+		++indexID;
+		++otherCount;
+
+		}
+
+	}
+	printf("letter count is:	%d	sample letters: %d", letterCount, otherCount);
+
+	for(i = 0; i < indexID +1; ++i){
+		printf("%c", s[i]);
+
+		}
 	
-		if(c != ' ' || c != '\t' ){
-			s[indexID] = c;
-			++indexID;
-			++wordCount;
-			}
-		if(c == ' ' || c == '\t'){
-			s[indexID] = c;
-			++nonWordCount;
-			++indexID;					
 
-			}
-		
-		}
 
-		int i = 0;	
-		printf("word count: %d  non-word count: %d", wordCount, nonWordCount);
-		for( i = 0; i < (wordCount + nonWordCount) ; ++i){
-			printf("%d", s[i]);
-		
-		}
-
-	return 0;
 
 }
