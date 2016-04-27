@@ -23,7 +23,12 @@ int main(void){
 		
 		}
 	}
+	int j;
+	for(j = 0; j < count; ++j){
+	
+		printf("%c", s[j]);
 
+	}
 
 return 0;
 
