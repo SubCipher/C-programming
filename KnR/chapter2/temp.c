@@ -1,10 +1,30 @@
 #include <stdio.h>
-#include <limits.h>
+
+#define MAXLIM 1024
 
 
-int main(){
 
-	printf("storage size for int: %d \n", sizeof(int));
+int main(void){
+
+	int i, c;
+	int count;
+	char s[MAXLIM];
+
+	while((c = getchar()) != EOF){
+
+	if( c != ' ' || c != '\t'){
+		++count;
+		s[++i] = c;
+		}
+
+	else{
+
+		s[++i] = c;
+		
+		}
+	}
+
+
 return 0;
 
 }
