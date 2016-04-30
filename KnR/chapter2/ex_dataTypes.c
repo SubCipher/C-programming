@@ -12,7 +12,7 @@ printf("Maximum value range of type char: %d\n", CHAR_MAX);
 printf("Minimum value range of type char: %d\n\n",CHAR_MIN);
 
 
-printf("***** UNSIGNED CHAR *****\n\n");
+printf("***** SIGNED CHAR *****\n\n");
 printf("Bits used for signed char: %lu\n",8 *sizeof(signed(char)));
 printf("Bytes used for signed char: %lu\n",sizeof(signed(char)));
 printf("Maximum value range of signed char: %d\n", SCHAR_MAX);
@@ -21,7 +21,15 @@ printf("Minimum value range of signed char : %d\n\n", SCHAR_MIN);
 
 printf("***** UNSIGNED CHAR value range*****\n");
 
-printf("Bytes used for type (unsigned)char: %d\n\n",UCHAR_MAX);
+printf("Bits used for unsigned char: %lu\n",8*sizeof(unsigned(char)));
+printf("Bytes used for unsiged char: %lu\n", sizeof(unsigned(char)));
+
+printf("type (unsigned)char max value (UCHAR_MAX): %d\n\n",UCHAR_MAX);
+
+
+printf("***** TYPE INT ******\n\n");
+printf("BIts used for type int: %lu\n",8*sizeof(int));
+printf("Bytes used for type int: %lu\n\n\n", sizeof(int));
 
 
 printf("***** type short (short)int*****\n\n");
