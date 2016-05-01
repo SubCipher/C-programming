@@ -1,22 +1,32 @@
 #include <stdio.h>
 
+#define lim 100
 
-
-/*squeeze: delete all c from s */
-
-void squeeze (char s[], int c){
-	int i, j;
-	
-	for(i = j = 0; s[i] != '\0'; i++)
-
-		if(s[i] != c)
-			s[j++] = s[i];
-		s[j] = '\0';
-	}
 int main(void){
 
-	squeeze( test, s1)
+int i = 0;
+int c;
+char s[lim];
+c = getchar();
 
-	
-	
+while(i < (lim -1)){
+
+	if(c != EOF){
+
+		if( c != '\n'){
+		//printf("this is true\n\n");
+		++i;
+		s[i] = c;
+		}
+	}
+}
+	int j;
+	for( j =0; j < lim-1; ++j){
+		printf("the value of s[j] is :%c\n", s[j]);
+
+
+	}
+
+return 0;
+
 }
