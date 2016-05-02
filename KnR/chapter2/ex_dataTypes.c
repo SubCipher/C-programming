@@ -5,13 +5,6 @@
 
 int main(void){
 
-printf("\n\n\n ***** CHAR *****\n\n");
-printf("Bits used for type CHAR: %lu\n",8*sizeof(char));
-printf("Bytes used for type char: %lu\n",sizeof(char));
-printf("Maximum value range of type char: %d\n", CHAR_MAX);
-printf("Minimum value range of type char: %d\n\n",CHAR_MIN);
-
-
 printf("***** SIGNED CHAR *****\n\n");
 printf("Bits used for signed char: %lu\n",8 *sizeof(signed(char)));
 printf("Bytes used for signed char: %lu\n",sizeof(signed(char)));
@@ -23,18 +16,19 @@ printf("***** UNSIGNED CHAR value range*****\n");
 
 printf("Bits used for unsigned char: %lu\n",8*sizeof(unsigned(char)));
 printf("Bytes used for unsiged char: %lu\n", sizeof(unsigned(char)));
-
 printf("type (unsigned)char max value (UCHAR_MAX): %d\n\n",UCHAR_MAX);
 
 
 printf("***** TYPE INT ******\n\n");
-printf("BIts used for type int: %lu\n",8*sizeof(int));
-printf("Bytes used for type int: %lu\n\n\n", sizeof(int));
+printf("BIts used for signed int: %lu\n",8*sizeof(int));
+printf("Bytes used for signed int: %lu\n\n\n", sizeof(int));
+printf("Maximum value range of type signed int: %d\n", INT_MAX);
+printf("Minimum value range  of type signed int: %d\n\n", INT_MIN);
 
 
 printf("***** type short (short)int*****\n\n");
-printf("Bits used for type short: %lu\n",8*sizeof(short));
-printf("Bytes used for type short: %lu\n",sizeof(short));
+printf("Bits used for short: %lu\n",8*sizeof(short));
+printf("Bytes used for short: %lu\n",sizeof(short));
 printf("Maximum value range of type short: %d\n", SHRT_MAX);
 printf("Minimum value range of type short: %d\n", SHRT_MIN);
 
@@ -43,9 +37,6 @@ printf("Maximum value range of type unsigned short: %u\n\n",(unsigned) USHRT_MAX
 
 
 
-printf("***** Type INT_MAX / MIN *****\n\n");
-printf("Maximum value range of type int: %d\n", INT_MAX);
-printf("Minimum value range  of type int: %d\n\n", INT_MIN);
 
 printf("***** UNSIGNED int *UINT_MAX *****\n\n");
 printf("Maximum value range of type unsigned int: %u\n\n", UINT_MAX);
