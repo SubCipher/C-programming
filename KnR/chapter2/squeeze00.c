@@ -1,15 +1,15 @@
 #include <stdio.h>
 #define MAXLIMIT 1024
 
-char * squeeze(char s[], int c){
+char * squeeze(char s0[], char s1[]){
 	int i,j;
 
-	for(i = j = 0; s[i] != '\0' ; i++)
-		if( s[i] != c)	
-			s[j++] = s[i];
-		s[j] = '\0';
+	for(i = j = 0; s0[i] != '\0' ; i++)
+		if( s0[i] == s1[i])	
+			s0[j++] = s0[i];
+		s0[j] = '\0';
 
-return s;
+	return s0;
 
 }
 
@@ -25,14 +25,14 @@ int main(void){
 			sourceText[i] = c;
 			++i;
 		}
-}
-	for(j = 0; j < i; ++j){
+	}
+	/*for(j = 0; j < i; ++j){
 		printf("%c",sourceText[j]);
-		}
+	}*/
 
-	compareText = squeeze(sourceText, 'a');
-		for(j = 0; j < i; ++j);
+	compareText = squeeze(sourceText, sourceText);
 	printf("%s\n",compareText);
+
 		
 
 return 0;
