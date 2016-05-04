@@ -9,9 +9,8 @@ char *squeezing( char s0[], char s1[]){
 			s0[j++] = s0[i];
 	s0[j] = '\0';
 		}
-		
 	
-	return s0;
+	return s1,s0;
 	}
 
 char * getText(){
@@ -28,12 +27,9 @@ char * getText(){
 	}
 	*/
 	static char comparedText[5] = {'a','c','g','n'};
-	
-
 	return comparedText;
 
 }
-
 
 int main(void){
 
@@ -41,8 +37,8 @@ int main(void){
 	int i;
 	char s2[MAXLIMIT];
 
-	char * getFromGetText;
-	char * getFromSqueeze;
+	char * getS0;
+	char * getS1;
 
 	while((c = getchar()) != EOF){
 		
@@ -50,13 +46,11 @@ int main(void){
 			s2[i] = c; 
 			++i;
 		}
-
 	}
 	//getFromGetText = getText(s2);
 
-	getFromSqueeze = squeezing(s2, getText());
+	getS0,getS1 = squeezing(s2, getText());
 	
-	printf("%s\n",getFromSqueeze);
-
+	printf("getS0 = %s, getS1 = %s \n",getS0,getS1);
 
 }
