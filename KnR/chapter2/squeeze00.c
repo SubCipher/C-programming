@@ -13,6 +13,7 @@ char * squeeze(char s0[], char s1[]){
 
 }
 
+
 int main(void){
 
 	int i, j;
