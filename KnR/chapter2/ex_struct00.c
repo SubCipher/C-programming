@@ -13,14 +13,23 @@ int main(){
 struct ReturnValues myValues;
 
 int i,c;
+char *s1[100];
+char *p;
 
-	while((c = getchar()) != EOF){
+
+
+	while((p = getchar()) != EOF){
 		if( i < 100){
-			strcpy( myValues.value1, c);
-//		++i;
+			s1[i] = p;
+		}	
+	
+		p = s1[i];
+
+		strcpy( myValues.value1, p);
+
 		}
-	}
-	printf("%s\n", myValues.value1);
+	
+	printf("this is the value => %s\n", myValues.value1);
 
 return 0;
 }

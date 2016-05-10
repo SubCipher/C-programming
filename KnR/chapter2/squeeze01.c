@@ -18,7 +18,7 @@ struct get_values {
 
 
 
-char *squeezing( char s0[], char s1[]){
+void *squeezing( char s0[], char s1[]){
 
 	struct my_values value1;
 
@@ -33,7 +33,6 @@ char *squeezing( char s0[], char s1[]){
 	strcpy( value1.v2, s1);
 
 
-	return 0;
 	}
 
 char * getText(){
@@ -75,6 +74,6 @@ int main(void){
 
  	getS0 = squeezing(s2, getText());
 	
-	printf("value2 = %s, %s", getS0.v1, value2.v2);
+	printf("value2 = %s, %s", getS0);
 
 }
