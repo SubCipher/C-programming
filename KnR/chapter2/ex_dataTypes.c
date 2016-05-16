@@ -1,7 +1,6 @@
 #include <stdio.h>
-
 #include <limits.h>
-
+#include <float.h>
 
 int main(void){
 
@@ -13,18 +12,15 @@ printf("Minimum value range of signed char : %d\n\n", SCHAR_MIN);
 
 
 printf("***** UNSIGNED CHAR value range*****\n");
-
 printf("Bits used for unsigned char: %lu\n",8*sizeof(unsigned(char)));
 printf("Bytes used for unsiged char: %lu\n", sizeof(unsigned(char)));
 printf("type (unsigned)char max value (UCHAR_MAX): %d\n\n",UCHAR_MAX);
-
 
 printf("***** TYPE INT ******\n\n");
 printf("BIts used for signed int: %lu\n",8*sizeof(int));
 printf("Bytes used for signed int: %lu\n\n\n", sizeof(int));
 printf("Maximum value range of type signed int: %d\n", INT_MAX);
 printf("Minimum value range  of type signed int: %d\n\n", INT_MIN);
-
 
 printf("***** type short (short)int*****\n\n");
 printf("Bits used for short: %lu\n",8*sizeof(short));
@@ -48,10 +44,15 @@ printf("***** TYPE unsigned long/ ULONG_MAX *****\n\n");
 printf("Maximum value range of type unsigned long: %lu\n\n", ULONG_MAX);
 
 
-printf("*****************Type Float********************");
-printf("Bits used for unsigned Float %lu\n",8*(sizeof(float));
+printf("*****************Type Float********************\n\n");
+printf("Bits used for unsigned Float %lu\n",8*(sizeof(float)));
 printf("Bytes used for unsigned Float %lu\n",sizeof(float));
  
+
+
+printf("*****************Type Double******************\n\n");
+printf("Bits used for unsigned double %lu \n",8*(sizeof(unsigned(double)))); 
+printf("Bytes used for unsigned double %lu \n",sizeof(unsigned(double)));
 
 return 0;
 
