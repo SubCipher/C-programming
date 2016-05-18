@@ -51,8 +51,8 @@ printf("Maximum value range of type unsigned long: %lu\n\n", ULONG_MAX);
 printf("************************** DATA TYPE: SIGNED Float ************************\n\n");
 printf("Bits used for unsigned Float %lu\n",8*sizeof(signed(float)));
 printf("Bytes used for unsigned Float %lu\n",sizeof(signed(float)));
-printf("Maximum value range for signed float %f\n", FLT_MAX);
-printf("Minimum value range for signed float %f\n", FLT_MIN);
+printf("Maximum value range for signed float %E\n", FLT_MAX);
+printf("Minimum value range for signed float %E\n", FLT_MIN);
 
 printf("************************** DATA TYPE: UNSIGNED Float ************************\n\n");
 printf("Bits used for unsigned Float %lu\n",8*sizeof(unsigned(float)));
