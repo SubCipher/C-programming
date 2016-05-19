@@ -1,16 +1,8 @@
 #include <stdio.h>
 
-int main(){
+int main(void){
 
-	int c;
-
-	while( c < 'z'){
-		++c;
-	printf("%c",c);
-	}	
+{
+	printf("My initials are: %c%c%c and my age is %d.\n",'J','R','E',28);
 	return 0;
-}	
-
-
-
-			
+}
