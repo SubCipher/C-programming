@@ -11,9 +11,12 @@ void squeeze(char s0[], char s1[]){
 }
 
 
-char *getNewText(){
+char getNewText(){
 
-	return 0;	
+	char thisText;
+	scanf("%s",&thisText);
+	
+	return thisText;	
 	}
 
 
