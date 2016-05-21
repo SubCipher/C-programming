@@ -3,7 +3,7 @@
 
 /* squeezey: delete all c from s */
 
-char * squeeze (char s[], int c){
+char *squeeze (char s[], int c){
 
 	int i,j;
 	for( i = j = 0; s[i] != '\0'; i++)
@@ -34,7 +34,7 @@ int main(void){
 		}
 
 		c_text = squeeze(s_text, getchar());
-			for(j = 0; j < i ; ++j);
+		//	for(j = 0; j < i ; ++j);
 			printf("what what?? %s\n",c_text);
 return 0;
 
