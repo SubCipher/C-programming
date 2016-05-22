@@ -8,9 +8,9 @@
 char *getInput(int n2c){
 	
 	int i ,c;
-	char *s = malloc (sizeof(char) * n2c);
+	//char *s = malloc (sizeof(char) * n2c);
 
-	//s = (int*) calloc (sizeof(int));
+	char *s = (char *) calloc (MAXLIMIT, sizeof(char));
 	while(( c = getchar()) != '\n'){
 			s[i++] = c;
 		}
@@ -18,28 +18,27 @@ char *getInput(int n2c){
 }
 
 
-
 int main(void){
 
-	
-	int i,j, numberToCompare;
+	int i, numberToCompare;
+	int j =0;	
 	char *inputText;
 	char *S0[MAXLIMIT];
 
 	printf("how many comparisions to make? ");
 	scanf("%d",&numberToCompare);
 	printf("\nrun these many times: %d\n",numberToCompare);
-	printf("enter some text\n");	
 	
 	for(i =0; i <= numberToCompare;i++){
+	
+		printf("enter some text\n");	
 		S0[j++]= getInput(numberToCompare);
+		
 		}
 	for(j =0; j < numberToCompare; j++){
 		printf("value %d is equal to = %s\n",j,S0[j]);
 		}
 
-	
-	
 return 0;
 	
 
