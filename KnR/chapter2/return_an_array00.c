@@ -33,9 +33,9 @@ int main(void){
 		printf("%c",s_text[j]);
 		}
 
-		c_text = squeeze(s_text, getchar());
-		//	for(j = 0; j < i ; ++j);
-			printf("what what?? %s\n",c_text);
+		c_text = squeeze(s_text,getchar());
+
+		printf("what what?? %s\n",c_text);
 return 0;
 
 }
