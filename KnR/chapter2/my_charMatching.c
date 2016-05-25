@@ -1,46 +1,28 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 #define MAXLIMIT 1024
 
+int main(){
 
-/* get input */
 
-char *getInput(int n2c){
+	int i = 0;
+	int c;
+	int numToCompare =0;
+	char inputText[25];
+	char s0[MAXLIMIT][50];
+
 	
-	   int i =0, c;
-	//char *s = malloc (sizeof(char) * n2c);
-
-	char *s = (char *) calloc (MAXLIMIT-1, sizeof(char));
-	while( i < n2c ){
-			s[i] = getchar();
-			++i;
-		}
-	return s;	
-}
-
-
-int main(void){
-
-	int i =0, numberToCompare;
-	int j =0;	
-	char *inputText;
-	char *S0[MAXLIMIT];
-
-	printf("how many comparisons to make? ");
-	scanf("%d",&numberToCompare);
-	printf("\nrun these many times: %d\n",numberToCompare);
-	
-	for(i =0; i <= numberToCompare;i++){
-	
-		printf("enter some text\n");	
-		S0[j++]= getInput(numberToCompare);
+	while(( c = getchar()) != '\n'){	
+		inputText[i++] = c;
 		
+	}
+	for(i=0; i < strlen(inputText); i++){
+		s0[0][i] = inputText[i];
 		}
-	for(j =0; j < numberToCompare; ++j){
-		printf("value %d is equal to = %s\n",j,S0[j]);
-		}
+	printf("result00: %s\n",inputText);
 
+	for(i =0; i < 11; i++){
+		printf("result01: %s\n",s0[i]);
+		}
 return 0;
-	
-
 }
