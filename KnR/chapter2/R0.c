@@ -31,7 +31,8 @@ int main(void){
 	printf("run these many times: %d\n",numberToCompare);
 	
 	for(i =0; i <= numberToCompare;++i){
-		//printf("enter some text\n");	
+		/t
+printf("enter some text\n");	
 		S0+i = getInput(numberToCompare);
 		}
 
