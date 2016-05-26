@@ -2,27 +2,36 @@
 #include <string.h>
 #define MAXLIMIT 1024
 
-int main(){
-
+char* function00(){
 
 	int i = 0;
 	int c;
-	int numToCompare =0;
-	char inputText[25];
-	char s0[MAXLIMIT][50];
+	char outToMain[MAXLIMIT];
+	outToMain =(char* )calloc(25,sizeof(char));
+	while((c =getchar()) !='\n'){
+		outToMain[i++] = c;
 
-	
-	while(( c = getchar()) != '\n'){	
-		inputText[i++] = c;
-		
 	}
-	for(i=0; i < strlen(inputText); i++){
-		s0[0][i] = inputText[i];
-		}
-	printf("result00: %s\n",inputText);
+return outToMain;
+}
+ 
+int main(){
 
-	for(i =0; i < 11; i++){
-		printf("result01: %s\n",s0[i]);
-		}
+	int i;
+	char s0[MAXLIMIT][50];	
+	int j,numToCompare;
+	char *inFromFunction;
+	
+	printf("how many arrays are to be read?");
+	scanf("%d",&numToCompare);
+
+	inFromFunction = function00();
+	
+	while(j < numToCompare-1){
+		for(i=0; i < numToCompare-1; i++){
+			s0[0][j] = inFromFunction[i];
+			}
+		j++;
+	}
 return 0;
 }
