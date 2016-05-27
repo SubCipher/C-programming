@@ -37,10 +37,6 @@ int main(void){
 	
 			inFromFunction = function00(numToCompare);
 			for(i=0; i < (strlen(inFromFunction)); ++i){
-		/*		if(count == numToCompare){
-					break;
-					} */
-			
 				s0[j][i] = inFromFunction[i];
 			}
 
