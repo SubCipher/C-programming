@@ -5,7 +5,7 @@
 
 
 /*define function*/ 
-char *function00(){
+char *function00(int n2c){
 
 	int i = 0;
 	int c;
@@ -18,13 +18,14 @@ char *function00(){
 	while((c =getchar()) != EOF ){
 		outToMain[i] = c;
 		i++;
-	}
+		}
+	
 	return outToMain;
 	}
  
 int main(void){
 
-	int i;
+	int i,count;
 	/*declare 2D array*/
 	char s0[MAXLIMIT][50];	
 	
@@ -34,17 +35,16 @@ int main(void){
 	printf("how many arrays are to be read?");
 	scanf("%d",&numToCompare);
 	
-	//inFromFunction = function00();
-	
-	//	while(j < (numToCompare)){
-			inFromFunction = function00();
-			for(i=0; i < (strlen(inFromFunction)); i++){
+			inFromFunction = function00(numToCompare);
+			for(i=0; i < (strlen(inFromFunction)); ++i){
+		/*		if(count == numToCompare){
+					break;
+					} */
+			
 				s0[j][i] = inFromFunction[i];
 			}
-		j++;
-	//	}
 
-		printf("results: %s\n",s0[0]);
+		printf("results: %c\n",s0[0][0]);
 	
 	return 0;
 	}
