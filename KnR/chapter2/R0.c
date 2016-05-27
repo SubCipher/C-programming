@@ -14,32 +14,36 @@ char *getInput(){
 			s[i] = c;
 			i++;		
 		}
-	free(s);
+	//free(s);
 	return s;
-	
 }
 
 int main(void){
 
-	int i =0, numberToCompare;
+	int i =0,count; 
 	int j =0;	
 	char *inputText;
 	char S0[MAXLIMIT][50];
-
+	printf("enter run count\n");
+	scanf("%d",&count);
 	inputText = getInput();
+	printf("%d",strlen(&inputText));
 	for(i =0; i < strlen(inputText); i++){
 		S0[j][i] = inputText[i];
-			if(inputText[i] == '\n'){
+			if(inputText[i]=='\n'){
+				inputText[i] = '\0';	
 				j++;
-				i = 0;				
 			}
 		}
-	printf("\n");
-	for(j =0; j < strlen(inputText) ; j++){
-		printf("|%d value = %c| sizeof= %lu\n",j,S0[1][j], sizeof(S0[1][j]));
+
+	//printf("%s",inputText);
+	
+	for(j= 0;j < count; j++){
+		for(i = 0; i <10 ; i++){	
+			printf("%d|%d value = %c| sizeof= %lu\n",j,i,S0[j][i], sizeof(S0[j][i]));
+			}
 	}
 
 return 0;
-	
 
 }
