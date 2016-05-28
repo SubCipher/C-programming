@@ -7,40 +7,42 @@
 
 char *getInput(){
 	
-	int i =0, c;
+	int i, c;
 	char *s;
 	s = (char *)calloc (25, sizeof(char));
 	while((c = getchar()) != EOF ){
 			s[i] = c;
 			i++;		
 		}
-	//free(s);
+	free(s);
 	return s;
 }
 
 int main(void){
 
-	int i =0,count; 
+	int ii,i,count; 
 	int j =0;	
 	char *inputText;
 	char S0[MAXLIMIT][50];
+	
 	printf("enter run count\n");
 	scanf("%d",&count);
-	inputText = getInput();
-	printf("%d",strlen(&inputText));
-	for(i =0; i < strlen(inputText); i++){
-		S0[j][i] = inputText[i];
-			if(inputText[i]=='\n'){
-				inputText[i] = '\0';	
-				j++;
+	//inputText = getInput();
+	
+	for(j =0; j < count; j++){
+		
+		inputText = getInput();
+		for(i= 0; i < strlen(inputText); i++){
+			S0[j][i] = inputText[i];
 			}
 		}
+		
 
-	//printf("%s",inputText);
+	printf("inputText =%s, %d",inputText,i);
 	
 	for(j= 0;j < count; j++){
 		for(i = 0; i <10 ; i++){	
-			printf("%d|%d value = %c| sizeof= %lu\n",j,i,S0[j][i], sizeof(S0[j][i]));
+			printf("\n%d|%d value = %c| sizeof= %lu",j,i,S0[j][i], sizeof(S0[j][i]));
 			}
 	}
 
