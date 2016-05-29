@@ -8,14 +8,15 @@
 char *getInput(){
 	
 	int i, c;
-	char *s;
-	s = (char *)calloc (25, sizeof(char));
+	char* s;
+	s = (char*)calloc(25, sizeof(char));
+	printf("s memory address of s =%p",&s);
 	printf("enter text: ");
 	while((c = getchar()) != EOF){
 			s[i] = c;
 			i++;
 		}
-	//free(s);
+	free(s);
 	return s;
 }
 
@@ -28,18 +29,18 @@ int main(void){
 	
 	printf("enter run count\n");
 	scanf("%d",&count);
-	//inputText = getInput();
+	inputText = getInput();
 	
+
 	for(j =0; j < count; j++){
 		inputText = getInput();
 		for(i= 0; i < 21/*(20*(strlen(inputText)))*/; i++){
 			S0[j][i] = inputText[i];
 			}
 		}
-
 	for(j= 0;j < count; j++){
-		for(i = 0; i <10 ; i++){	
-			printf("\n%d|%d value = %c| sizeof= %lu",j,i,S0[j][i], sizeof(S0[j][i]));
+		for(i = 0; i <20; i++){	
+			printf("\n%d|%d value = %c| sizeof= %lu",j,i,S0[0][i], sizeof(S0[j][i]));
 			}
 	}
 
