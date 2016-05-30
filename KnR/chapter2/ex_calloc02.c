@@ -20,10 +20,11 @@ int main(){
 	for(i=0; i < n; i++){
 		printf("%c",a[i]);
 		}
-
 	for(i=0; i< n; i++){
-		printf("allocated memory space index: %d address %p\n:",i,&a[i]);
+
+		printf("char =%c | index ID: %d | allocated memory address: %p: \n",a[i],i,&a[i]);
 	}
+	printf("index result; for a[1] is: %c with memeory alloacation of: %p",a[1],&a[1]);
 
 	free(a);
 	return(0);
