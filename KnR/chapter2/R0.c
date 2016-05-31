@@ -5,18 +5,17 @@
 
 /* get input */
 
-char *getInput(){
+char *getInput(int n){
 	
 	int i, c;
 	char* s;
-	s = (char*)calloc(25, sizeof(char));
-	printf("s memory address of s =%p",&s);
-	printf("enter text: ");
+	s = (char*)calloc(n, sizeof(char));
+	printf("enter %d elements to store in memory ",n);
 	while((c = getchar()) != EOF){
 			s[i] = c;
 			i++;
 		}
-	free(s);
+	//free(s);
 	return s;
 }
 
@@ -24,25 +23,21 @@ int main(void){
 
 	int i=0,count; 
 	int j =0;	
-	char *inputText;
-	char S0[MAXLIMIT][50];
+	char* inputText;
+	char S0[count][50];
 	
 	printf("enter run count\n");
 	scanf("%d",&count);
-	inputText = getInput();
 	
 
-	for(j =0; j < count; j++){
-		inputText = getInput();
-		for(i= 0; i < 21/*(20*(strlen(inputText)))*/; i++){
+		inputText = getInput(count);
+		for(i= 0; i < count; i++){
 			S0[j][i] = inputText[i];
 			}
-		}
-	for(j= 0;j < count; j++){
-		for(i = 0; i <20; i++){	
-			printf("\n%d|%d value = %c| sizeof= %lu",j,i,S0[0][i], sizeof(S0[j][i]));
+
+		for(i = 0; i <count; i++){	
+			printf("\n%d|%d value = %c| sizeof= %lu",j,i,S0[j][i], sizeof(S0[j][i]));
 			}
-	}
 
 return 0;
 
