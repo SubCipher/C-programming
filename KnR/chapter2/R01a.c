@@ -9,10 +9,11 @@ char *getInput(n){
 	
 	int i, c;
 	char* s;
-	s = (char*)calloc(25, sizeof(char));
+	s = (char*)calloc(n,sizeof(char));
 	while((c = getchar()) != EOF){
 		s[i] = c;
-		printf("function index: %d | value = %c | sizeof = %lu | memory address %p | \n",i,s[i],sizeof(s[i]),&s[i]);
+		printf("function index: %d | value = %c | sizeof = %lu | memory address %p",i,s[i],sizeof(s[i]),&s[i]);
+		printf("\n");
 		i++;
 		}
 
@@ -22,20 +23,44 @@ char *getInput(n){
 
 int main(void){
 
-	int i=0,count; 
+	int i=0,count,numArraysToCompare; 
 	int j =0;	
 	char* inputText;
-	char* S0[count];
-	printf("enter memory allocation for array elements: \n");	
+	char s[10][count];
+	printf("how much memory should we allocation for array elements?: \n");	
 	scanf("%d",&count);
 	
+	printf("enter the amount of arrays to make for comparison: \n");
+	scanf("%d",&numArraysToCompare);
+
+	
 	printf("enter %d elements to store in memory: \n",count);
+
+	
+	inputText = getInput(count);
+
+
 	for(i =0; i < count; i++){
-		S0[i] = getInput(count);
+		printf("main index ID: %d | sizeof = %lu | main value %c | memory address: %p \n",i,sizeof(inputText),inputText[i],&inputText);
 	}
-	for(i = 0; i < count; i++){	
-	printf("\n%d|%d value = %s| sizeof= %lu | memory address: %p ",j,i,S0[i], sizeof(S0[i]), &S0[i]);
+
+
+
+	for(j =0; j < numArraysToCompare; j++){
+		for(i = 0; i < count; i++){
+			inputText[i] = s[j][i];
+			if(inputText[i] == '\n'){
+			break;
+			}
+		}
 	}
+
+	for(j =0; j < numArraysToCompare; j++){
+		for(i =0; i < count; i++){
+			printf("2D array main index value: %d|%d | value = %c \n",j,i,s[j][i]);
+			}
+		}
+
 return 0;
 
 }
