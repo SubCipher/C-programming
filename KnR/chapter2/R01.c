@@ -30,7 +30,7 @@ int main(void){
 	int i=0,count; 
 	int j =0;	
 	char* inputText;
-	char S0[count];
+	char* S0[count];
 	
 	printf("enter run count\n");
 	scanf("%d",&count);
@@ -38,12 +38,10 @@ int main(void){
 		inputText = getInput(count);
 		printf("inputText value from function = %s",inputText);
 
-		for(i= 0; i < count; i++){
-			S0[i] = inputText[i];
-			}
-
+		S0[i] = inputText;
+		
 		for(i = 0; i <count; i++){	
-			printf("\n%d|%d value = %c| sizeof= %lu | memory address: %p ",j,i,S0[i], sizeof(S0[i]), &S0[i]);
+			printf("\n%d|%d value = %s| sizeof= %lu | memory address: %p ",j,i,S0[i], sizeof(S0[i]), &S0[i]);
 			}
 
 return 0;
