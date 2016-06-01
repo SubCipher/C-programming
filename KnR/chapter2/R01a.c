@@ -45,11 +45,12 @@ int main(void){
 	}
 
 
-
+	int i2 = 0;
 	for(j =0; j < numArraysToCompare; j++){
 		for(i = 0; i < count; i++){
-			inputText[i] = s[j][i];
+			s[j][i2] = inputText[i];
 			if(inputText[i] == '\n'){
+			i2 =0;
 			break;
 			}
 		}
