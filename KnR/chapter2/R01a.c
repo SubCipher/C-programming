@@ -41,34 +41,23 @@ int main(void){
 		printf("main index ID: %d | sizeof = %lu | main value %c | memory address: %p \n",i,sizeof(inputText),inputText[i],&inputText);
 	}
 
-<<<<<<< HEAD
 
-	/*int i2 = 0;
-	for(j =0; j < numArraysToCompare; j++){
-		for(i = 0; i < count; i++){
-			s[j][i2] = inputText[i];
-=======
-	printf("inputText position B value HERE is= %c\n\n",inputText[i]);
+	printf("inputText position B value: %s | address in memory: %p\n",inputText,&inputText);
 
-	for(j =0; j < numArraysToCompare; j++){
-		for(i = 0; i < count; i++){
-			s[j][i] = inputText;
-			//inputText[i] = s[j][i];
->>>>>>> 87ee57584bf780d108e4e9efbe5ac23fd1a5e942*/
 
-			if(inputText[i] == '\n'){
-			i2 =0;
-			break;
-			}
+
+	char* compare[6][6];
+	for(j =0; j <5; j++){
+		for(i =0; i<5; i++){
+		compare[j][i] = &inputText[i];
 		}
 	}
-
-	for(j =0; j < numArraysToCompare; j++){
-		for(i =0; i < count; i++){
-			printf("2D main index: %d|%d | sizeof = %lu | value = %s | memory address: %p \n",j,i,sizeof(s[j][i]),s[j][i],&s[j][i]);
+	for(j =0; j <5; j++){
+		for(i =0; i < 5; i++){
+			printf("value of compare[%d][%d] is %s",j,i,compare[j][i]);
 			}
-
-		}	
+		}
+	
 		return 0;
 
 }
