@@ -26,14 +26,16 @@ int main(void){
 	//char s[10][count];
 	printf("how much memory should we allocation for array elements?: \n");	
 	scanf("%d",&count);
-	
-	char* s[10][count];
-	
+
+
 	printf("enter the amount of arrays to make for comparison: \n");
 	scanf("%d",&numArraysToCompare);
 	
-	printf("enter %d elements to store in memory: \n",count);
+	char* s[numArraysToCompare][count][count];
 	
+	
+	printf("enter %d elements to store in memory: \n",count);
+/*	
 	inputText = getInput(count);
 
 	printf("position A for inputText value HERE is: %s\n\n",inputText);
@@ -43,23 +45,30 @@ int main(void){
 
 
 	printf("inputText position B value: %s | address in memory: %p\n",inputText,&inputText);
+*/
 
 
-	int k;
-	char* compare[6][6];
-	for(j =0; j <5; j++){
-		for(i =0; i<10; i++){
-		compare[j][i] = &inputText[k];
-		k++;
+	//inputText = getInput(count);
+	int k,l;
+	char* compare[numArraysToCompare-1][count-1][count-1];
+
+	for(j =0; j < numArraysToCompare; j++){
+		for(i =0; i<count; i++){
+			for(k=0; k< count; k++){
+				compare[j][i][k] = getInput(count);
+			}
+	
 		}
 	}
 
-	printf("position c value of inputText[j][%d] => %s",j,compare[j][1]);
-	for(j =0; j <5; j++){
-		for(i =0; i < 5; i++){
-			printf("value of compare[%d][%d] is: %s\n",j,i,compare[j][i]);
+	printf("position c value of inputText[%d][%d][%d] => %s",j,i,k,compare[j][i][k]);
+	for(j =0; j <numArraysToCompare; j++){
+		for(i =0; i <count; i++){
+			for(k=0; k< count; k++){
+				printf("value of compare[%d][%d][%d] is: %s\n",j,i,k,compare[j][i][k]);
 			}
 		}
+	}
 	
 		return 0;
 

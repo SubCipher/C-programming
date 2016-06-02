@@ -1,42 +1,63 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
+char *getInput(n){
+	
+	int i, c;
+	char* s;
+	s = (char*)calloc(n,sizeof(char));
+	while((c = getchar()) != EOF){
+		s[i] = c;
+		printf("function index: %d | value = %c | sizeof = %lu | memory address %p",i,s[i],sizeof(s[i]),&s[i]);
+		printf("\n");
+		i++;
+		}
+
+//	free(s);
+	return s;
+}
 
 int main(void){
 
+	int i=0,count,numArraysToCompare; 
+	int j =0;	
+	char* inputText;
+	//char s[10][count];
+	printf("how much memory should we allocation for array elements?: \n");	
+	scanf("%d",&count);
+	
+	char* s[10][count];
+	
+	printf("enter the amount of arrays to make for comparison: \n");
+	scanf("%d",&numArraysToCompare);
+	
+	printf("enter %d elements to store in memory: \n",count);
+	
+	inputText = getInput(count);
 
-	char word1[3]= "One";
-	printf("%s",word1);
+	printf("position A for inputText value HERE is: %s\n\n",inputText);
+	printf("position A for inputText[4] value HERE is: %s n\n",&inputText[4]);
+	printf("index ID: 4 | value: %c | sizeof: %lu | memory location: %p",inputText[4],sizeof(inputText[4]),&inputText[4]);
+	printf("\n\n");
 
-	int numbers[] = {16,17,18,19,20};
-	/* //alternative	
-	numbers[0] = 16;
-	numbers[1] = 17;
-	numbers[2] = 18;
-	numbers[3] = 19;
-	numbers[4] = 20;
-	*/
-	int i,j;
-	for(i =0; i < 5; i++){
-		printf("array index: %d | value: %d | sizeof: %lu | memory location: %p \n", i, numbers[i],sizeof(numbers[i]), &numbers[i]);
+	for(i =0; i < count; i++){
+		printf("main index ID: %d | sizeof = %lu | main value %s | memory address: %p \n",i,sizeof(inputText[i]),inputText[i],&inputText[i]);
+	}
+
+
+	printf("inputText position B value: %s | address in memory: %p\n",inputText,&inputText);
+
+	
+	for(i =0; i < count; i++){
+		s[j][i] = &inputText[i];
+		}
+	
+
+	for(i =0; i < count; i++){
+		printf("\n 2D output:: index ID: %d|%d | value: %s | sizeof: %lu | memory address: %p \n",j,i,&s[j][i],sizeof(s[j][i]),&s[j][i]);
 		}
 
-	char c[] = "hello world\n ";
-	printf("%s\n",c);
-
-	for(i =0; i < strlen(c); i++){
-		printf("array index %d | value: %c | sizeof: %lu | memory location: %p \n", i, c[i], sizeof(c[i]),&c[i]);
-	}		
-	
-	char* my_2Darray[8][8];
-	my_2Darray[5][0] = "hello world";
-	printf("my 2D array");
-	
-	for(j =0; j < 6; j++){
-		for(i =0; i < 6; i++){
-			printf("2D array index %d|%d | value %s | sizeof: %lu | memory address: %p\n",j,i,my_2Darray[j][i],sizeof(my_2Darray[j][i]),&my_2Darray[j][i]);
-		}
-}
 
 return 0;
 
