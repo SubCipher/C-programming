@@ -21,11 +21,12 @@ char *getInput(n){
 int main(void){
 
 	int i=0,count,numArraysToCompare; 
-	int j,x =0;	
+	int j =0;	
 	char* inputText;
 	//char s[10][count];
 	printf("how much memory should we allocation for array elements?: \n");	
 	scanf("%d",&count);
+	
 	
 	printf("enter the amount of arrays to make for comparison: \n");
 	scanf("%d",&numArraysToCompare);
@@ -35,21 +36,17 @@ int main(void){
 	  
 	inputText = getInput(count);
 
-	for(j =0; j < strlen(inputText); j++){
-		s[i][j] = &inputText[j];
-		}
-	for(j= x =0; x < strlen(inputText); x++){
-		printf("this is it: %c(%d) memory location: %p\n",s[i][j][x],x,&inputText[x]);
-		
+	for(i =0; i < strlen(inputText); i++){
+		s[j][i] = &inputText[i];
+		printf("this is it: %c(%d) memory location: %p\n",s[j][0][i],i,&inputText[i]);
 	}
 
+	
 	printf("\n\n");
 	printf("what it is: %c | location in memory: %p \n",s[0][0][1], &s[0][0][1]);
 	printf("what it is: %c | location in memory: %p \n",s[0][0][2], &s[0][0][2]);
 	printf("what it is: %c | location in memory: %p \n",s[0][0][3], &s[0][0][3]);
 	printf("\n\n");
-
-
 return 0;
 
 }
