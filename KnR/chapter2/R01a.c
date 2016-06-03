@@ -27,11 +27,12 @@ int main(void){
 	printf("how much memory should we allocation for array elements?: \n");	
 	scanf("%d",&count);
 	
-	char* s[10][count];
 	
+	char* s[10][count];
 	printf("enter the amount of arrays to make for comparison: \n");
 	scanf("%d",&numArraysToCompare);
 	
+	//char* s[numArraysToCompare][count];
 	printf("enter %d elements to store in memory: \n",count);
 	
 	inputText = getInput(count);
