@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define MAXLIMIT 1024
+
+
 
 char *getInput(n){
 	
-	int i, c;
+	int i=0;
+	int c;
 	char* s;
 	s = (char*)calloc(n,sizeof(char));
 	while((c = getchar()) != EOF){
@@ -14,42 +18,63 @@ char *getInput(n){
 		i++;
 		}
 
-	free(s);
+//	free(s);
 	return s;
 }
 
 int main(void){
 
-	int i=0,count,numArraysToCompare; 
-	int j,x =0;	
+	int i=0;
+	int elementCount =0;
+	int numArraysToCompare =0; 
+	int j,x,k =0;	
+	int breakCount=0;	
 	char* inputText;
-	//char s[10][count];
-	printf("how much memory should we allocation for array elements?: \n");	
-	scanf("%d",&count);
+	printf("how much memory should we allocate for array elements?: \n");	
+	scanf("%d",&elementCount);
 	
 	printf("enter the amount of arrays to make for comparison: \n");
 	scanf("%d",&numArraysToCompare);
-	char* s[numArraysToCompare][count];
+	char* s[numArraysToCompare][elementCount];
 
-	printf("enter %d elements to store in memory: \n",count);
+	printf("enter %d elements to store in memory: \n",elementCount);
 	  
-	inputText = getInput(count);
+	inputText = getInput(numArraysToCompare);
 
-	for(j =0; j < strlen(inputText); j++){
-		s[i][j] = &inputText[j];
+	for(i = 0; i < 100; i++){
+		s[numArraysToCompare][elementCount] = 0;
 		}
-	for(j= x =0; x < strlen(inputText); x++){
-		printf("this is it: %c(%d) memory location: %p\n",s[i][j][x],x,&inputText[x]);
-		
+
+	printf("\n\n");
+	
+	printf("inputText assigned memory address %p | contents of address %p ",&inputText,inputText);
+
+	printf("\n\n");
+	printf("de-referenced address: %p |contents of address: %s",*(&inputText),&(*inputText));	
+
+	printf("\n\n");
+
+	printf("%lu = strlen(inputText)",strlen(inputText));
+
+	printf("\n\n");
+
+		while( i < strlen(inputText) ) {
+			if(inputText[i] != 'e'){
+				s[i][j][x] = inputText[i];
+				++x;
+				}
+			if(inputText[i] == 'e'){
+				s[i][j][x] = '\0';
+				++j;
+				x =0;
+				}
+			++i;
+		}
+
+
+	for(j =0; x< strlen(inputText); x++){		
+		printf("main index ID: s[%d][%d][%d] | value: %c | sizeof: %lu | address: %p \n",i,j,x,s[i][j][x],sizeof(s[i][j][x]),&s[i][j][x]);	
 	}
 
-	printf("\n\n");
-	printf("what it is: %c | location in memory: %p \n",s[0][0][1], &s[0][0][1]);
-	printf("what it is: %c | location in memory: %p \n",s[0][0][2], &s[0][0][2]);
-	printf("what it is: %c | location in memory: %p \n",s[0][0][3], &s[0][0][3]);
-	printf("\n\n");
-
-
-return 0;
-
+	return 0;
 }

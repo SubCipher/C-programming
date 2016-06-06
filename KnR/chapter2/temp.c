@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAXLIMIT 1024
+
+
+
 char *getInput(n){
 	
 	int i=0;
@@ -36,7 +39,7 @@ int main(void){
 
 	printf("enter %d elements to store in memory: \n",elementCount);
 	  
-	inputText = &getInput(numArraysToCompare);
+	inputText = getInput(numArraysToCompare);
 
 	for(i = 0; i < 100; i++){
 		s[numArraysToCompare][elementCount] = 0;
@@ -44,24 +47,21 @@ int main(void){
 
 	printf("\n\n");
 	
-	printf("memory address for &inputText: %p",&inputText);
-
-	printf("\n");
-printf("contents of &inputText (the value address held by the pointer): *inputText = %d",*inputText);
+	printf("inputText assigned memory address %p | contents of address %p ",&inputText,inputText);
 
 	printf("\n\n");
+	printf("de-referenced address: %p |contents of address: %s",*(&inputText),&(*inputText));	
 
+	printf("\n\n");
 	
-
+	for(i =0; i<strlen(inputText); i++){
+	
+		printf("assigned memory: %p :inputText ascii ref: %d |de-referenced address: %p | contents of address: %c\n",&inputText[i],*(&inputText[i]),&inputText[i],inputText[i]);
+		}
+	printf("\n\n");
 	printf("%lu = strlen(inputText)",strlen(inputText));
 
-	printf("\n");
-	printf("%lu = strlen(&inputText)",strlen(&inputText));
 	printf("\n\n");
-
-
-
-
 
 		while( i < strlen(inputText) ) {
 			if(inputText[i] != 'e'){
@@ -77,83 +77,9 @@ printf("contents of &inputText (the value address held by the pointer): *inputTe
 		}
 
 
-
-
-/*
-		printf("\n\n inputText value: %s \n memory location: %p \n\n",inputText,&inputText);
-
-		printf("\n inputText[0] value: %c \n memory location:%p \n\n",inputText[0],&inputText[0]);
-		printf("\n inputText[1] value: %c \n memory location:%p \n\n",inputText[1],&inputText[1]);
-		printf("\n inputText[2] value: %c \n memory location:%p \n\n",inputText[2],&inputText[2]);
-		printf("\n\nprint contents of of inputText: %s\n",inputText);
-		
-		
-		printf("\n\n");
-		printf("\n\n");
-     	printf("this >> %s<< (s[0][0]) is the value at memory address space %p\n\n",s[0][0],&s[0][0]);
-
-     	printf("%s (s[1][0]) is the value at memory address space %p\n\n",s[1][0],&s[1][0]);
-     	printf("%s (s[2][0]) is the value at memory address space %p\n\n",s[2][0],&s[2][0]);
-     	printf("%s (s[3][0]) is the value at memory address space %p\n\n",s[3][0],&s[3][0]);
-		printf("\n\n");
-		printf("\n\n");
-*/
-
-/*     	printf("%s (s[0][2]) is the value at memory address space %p\n",s[0][2],&s[0][2]);
-
-      	printf("%s is the value of s[1][1] at memory address space %p",s[1][1],&s[1][1]);
-	printf("\n");
-	printf("\n");
-  	printf("%s is the value of s[2][0] at memory address space %p",s[2][0],&s[2][0]);
-	printf("\n");
-	printf("\n");
-      	printf("%s is the value of s[3][0] at memory address space %p",s[3][0],&s[3][0]);
-	printf("\n");
-	printf("\n");
-      	printf("%s is the value of s[4][0] at memory address space %p",s[4][0],&s[4][0]);
-	printf("\n");
-	printf("\n");
-
-     printf("%s is the value of s[5][0] at memory address space %p",s[5][0],&s[5][0]);
-	printf("\n");
-	printf("\n");
-      	printf("%c is the value of s[0][0][2] at memory address space %p",s[0][0][2],&s[0][0][2]);
-	printf("\n");
-	printf("\n");
-      	printf("%c is the value of s[0][0][3] at memory address space %p",s[0][0][3],&s[0][0][3]);
-	printf("\n");
-	printf("\n");
-
-
-
-    	printf("%s is the value of s[0][0] at memory address space %p\n",s[0][0],&s[0][0]);
-    	printf("%s is the value of s[0][1] at memory address space %p\n",s[0][1],&s[0][1]);
-    	printf("%s is the value of s[0][2] at memory address space %p\n",s[0][2],&s[0][2]);
-    	printf("%s is the value of s[0][3] at memory address space %p\n",s[0][3],&s[0][3]);
-    	printf("%s is the value of s[0][4] at memory address space %p\n",s[0][4],&s[0][4]);
-    	printf("%s is the value of s[0][5] at memory address space %p\n",s[0][5],&s[0][5]);
-    	printf("%s is the value of s[0][6] at memory address space %p\n",s[0][6],&s[0][6]);
-    	printf("%s is the value of s[0][7] at memory address space %p\n",s[0][7],&s[0][7]);
-    	printf("%s is the value of s[0][8] at memory address space %p\n",s[0][8],&s[0][8]);
-    	printf("%s is the value of s[0][9] at memory address space %p\n",s[0][9],&s[0][9]);
-	printf("\n");
-	printf("\n");
-    	printf("%c is the value of s[0][0][1] at memory address space %p\n",s[0][0][1],&s[0][0][1]);
-    	printf("%c is the value of s[0][0][2] at memory address space %p\n",s[0][0][2],&s[0][0][2]);
-    	printf("%c is the value of s[0][0][3] at memory address space %p\n",s[0][0][3],&s[0][0][3]);
-    	printf("%c is the value of s[0][0][4] at memory address space %p\n",s[0][0][4],&s[0][0][4]);
-    	printf("%c is the value of s[0][0][5] at memory address space %p\n",s[0][0][5],&s[0][0][5]);
-    	printf("%c is the value of s[0][0][6] at memory address space %p\n",s[0][0][6],&s[0][0][6]);
-    	printf("%c is the value of s[0][0][7] at memory address space %p\n",s[0][0][7],&s[0][0][7]);
-	printf("\n");
-	printf("\n");
-
-
-
 	for(j =0; x< strlen(inputText); x++){		
 		printf("main index ID: s[%d][%d][%d] | value: %c | sizeof: %lu | address: %p \n",i,j,x,s[i][j][x],sizeof(s[i][j][x]),&s[i][j][x]);	
-	}i
-*/
-return 0;
+	}
 
+	return 0;
 }
