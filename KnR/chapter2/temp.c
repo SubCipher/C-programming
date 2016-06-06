@@ -36,15 +36,32 @@ int main(void){
 
 	printf("enter %d elements to store in memory: \n",elementCount);
 	  
-	inputText = getInput(numArraysToCompare);
+	inputText = &getInput(numArraysToCompare);
 
 	for(i = 0; i < 100; i++){
 		s[numArraysToCompare][elementCount] = 0;
 		}
 
+	printf("\n\n");
+	
+	printf("memory address for &inputText: %p",&inputText);
 
+	printf("\n");
+printf("contents of &inputText (the value address held by the pointer): *inputText = %d",*inputText);
+
+	printf("\n\n");
+
+	
 
 	printf("%lu = strlen(inputText)",strlen(inputText));
+
+	printf("\n");
+	printf("%lu = strlen(&inputText)",strlen(&inputText));
+	printf("\n\n");
+
+
+
+
 
 		while( i < strlen(inputText) ) {
 			if(inputText[i] != 'e'){
