@@ -3,8 +3,6 @@
 #include <string.h>
 #define MAXLIMIT 1024
 
-
-
 char *getInput(n){
 	
 	int i=0;
@@ -13,7 +11,7 @@ char *getInput(n){
 	s = (char*)calloc(n,sizeof(char));
 	while((c = getchar()) != EOF){
 		s[i] = c;
-		printf("function index: %d | value = %c | sizeof = %lu | memory address %p",i,s[i],sizeof(s[i]),&s[i]);
+		printf("s array index ID: %d | sizeof = %lu | memory address %p | contents %c",i,sizeof(s[i]),&s[i],s[i]);
 		printf("\n");
 		i++;
 		}
@@ -47,27 +45,15 @@ int main(void){
 
 	printf("\n\n");
 	
-	printf("[sample A inputText] pointer assigned address %p | contents of address %p ",&inputText,inputText);
+	printf("[sample A] pointer address %p | contents of address %p ",&inputText,inputText);
 
 	printf("\n\n");
-	printf("[sample B] (pointee) de-referenced address: %p |contents of address: %s",*(&inputText),&(*inputText));	
+	printf("[sample B] pointee address: %p |contents of address: %s",*(&inputText),&(*inputText));	
 
 	printf("\n\n");
 	
 	for(i =0; i<strlen(inputText); i++){
-	
-		printf("[sample c] (pointer) assigned address: %p | contents of address %c \n",&inputText[i], inputText[i] );
-	}
-
-
-	printf("\n\n");
-	for(i =0; i<strlen(inputText); i++){
-		printf("[sample d] (pointee) contents of de-refenced address: %c \n ",*(&inputText[i]));
-	}
-	printf("\n\n");
-	
-	for(i =0; i<strlen(inputText); i++){
-		printf("[sample e] pointer assigned address %p | contents of address %c \n",&inputText[i], inputText[i]);
+		printf("[sample e] pointer address %p | contents of address %c \n",&inputText[i], inputText[i]);
 		}
 	printf("\n\n");
 	
@@ -87,7 +73,6 @@ int main(void){
 				}
 			++i;
 		}
-
 
 	for(j =0; x< strlen(inputText); x++){		
 		printf("main index ID: s[%d][%d][%d] | value: %c | sizeof: %lu | address: %p \n",i,j,x,s[i][j][x],sizeof(s[i][j][x]),&s[i][j][x]);	
