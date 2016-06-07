@@ -8,8 +8,17 @@ int main () {
 	int i;
 	printf("\n\nArray Of Values\n\n");
 	for(i =0; i < MAX; i++){
+		printf("var[/d] | assigned address: /p  | contents of address:/d \n");
+		
+		printf("var[%d] | 	 %p	 | %d\n ",i,&var[i],var[i] );
+		
+		printf(" i	|	&var[i]		|		var[i]		\n\n\n");
+	}
+
+	for(i =0; i < MAX; i++){
 		printf("var[%d] | assigned address: %p  | contents of address:%d \n",i,&var[i],var[i] );
 	}
+
 
 	printf("\n\n");
 
@@ -40,7 +49,7 @@ int main () {
 		"Punisher, Marvel comics",
 		};
 	for( i =0; i < MAX; i++){
-		printf("A--Names[%d] | assigned address: %p | contents of address: %s \n",i,&(*names[i]),names[i]);
+		printf("A--Names[%d] | assigned address: %p | contents of address: %s\n",i,&(*names[i]),names[i]);
 		}
 	
 	printf("\n\n");

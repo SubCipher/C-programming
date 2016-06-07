@@ -20,7 +20,7 @@ srand( (unsigned)time( NULL) );
 
 
 	for (i = 0; i < 10; i++){
-		printf("index[%d] | POINTer address %p | content at address: %d \n",i ,*(&r[i]), r[i]);
+		printf("index[%d] | POINTer address %p | content at address: %d \n",i ,&r[i], r[i]);
 	}
 
  	return r;
@@ -42,7 +42,7 @@ int main() {
 	}
 	
 	for (i = 0; i < 10; i++){
-		printf("index[%d] | pointer address %p | content at address: %p \n",i ,&p[i],p[i] );
+		printf("index[%d] | pointer address %p | content at address: %d  \n",i ,&p[i],p[i] );
 	}
 	
 	return 0;
