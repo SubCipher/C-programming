@@ -40,12 +40,12 @@ int main () {
 		"Punisher, Marvel comics",
 		};
 	for( i =0; i < MAX; i++){
-		printf("Names[%d] | assigned address: %p | contents of address: %s \n",i,&(*names[i]),names[i]);
+		printf("A--Names[%d] | assigned address: %p | contents of address: %s \n",i,&(*names[i]),names[i]);
 		}
 	
 	printf("\n\n");
 	for( i =0; i < MAX; i++){
-		printf("names[%d] | (pointer) assigned address: %p | contents of address: %p \n",i,&names[i],names[i] );
+		printf("B--names[%d] | (pointer) assigned address: %p | contents of address: %p \n",i,&names[i],names[i] );
 
 		}
 	printf("\n\n");
