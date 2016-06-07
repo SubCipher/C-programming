@@ -29,7 +29,7 @@ int main(void){
 	printf("value of *ip variable: %d\n",*ip );
 
 	printf("\n\n");
-	printf("value of &ip variable (or the address used by the pointer itself: %p\n\n",&ip );
+	printf("address of &ip variable (the address used by the pointer itself: %p\n\n",&ip );
 
 
 

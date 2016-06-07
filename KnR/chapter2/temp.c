@@ -47,18 +47,30 @@ int main(void){
 
 	printf("\n\n");
 	
-	printf("inputText assigned memory address %p | contents of address %p ",&inputText,inputText);
+	printf("[sample A inputText] pointer assigned address %p | contents of address %p ",&inputText,inputText);
 
 	printf("\n\n");
-	printf("de-referenced address: %p |contents of address: %s",*(&inputText),&(*inputText));	
+	printf("[sample B] (pointee) de-referenced address: %p |contents of address: %s",*(&inputText),&(*inputText));	
 
 	printf("\n\n");
 	
 	for(i =0; i<strlen(inputText); i++){
 	
-		printf("assigned memory: %p :inputText ascii ref: %d |de-referenced address: %p | contents of address: %c\n",&inputText[i],*(&inputText[i]),&inputText[i],inputText[i]);
+		printf("[sample c] (pointer) assigned address: %p | contents of address %c \n",&inputText[i], inputText[i] );
+	}
+
+
+	printf("\n\n");
+	for(i =0; i<strlen(inputText); i++){
+		printf("[sample d] (pointee) contents of de-refenced address: %c \n ",*(&inputText[i]));
+	}
+	printf("\n\n");
+	
+	for(i =0; i<strlen(inputText); i++){
+		printf("[sample e] pointer assigned address %p | contents of address %c \n",&inputText[i], inputText[i]);
 		}
 	printf("\n\n");
+	
 	printf("%lu = strlen(inputText)",strlen(inputText));
 
 	printf("\n\n");
