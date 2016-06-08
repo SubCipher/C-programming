@@ -8,12 +8,22 @@ int main(void){
 	ptr = &my_array[0]; 		/* point to first element of array */
 
 
-	printf("\n\n");
+	printf("Ex: A: \n\n");
 	for( i =0; i < 6; i++){
 		printf("my_array[%d] = %d   	",i,my_array[i]); /*<--A */
-//		printf("ptr + %d = %d \n",i, *(ptr + i));	/*<--B */
+	//	printf("ptr + %d = %d \n",i, *(ptr + i));	/*<--B */
+}	
+
+printf("Ex: B\n\n");
+	for( i =0; i < 6; i++){
+		printf("my_array[%d] = %d   	",i,my_array[i]); /*<--A */
 //		printf("ptr + %d = %d \n",i, *ptr++);
+	}
+printf("Ex: C \n\n");
+	for( i =0; i < 6; i++){
+		printf("my_array[%d] = %d   	",i,my_array[i]); /*<--A */
 		printf("ptr + %d = %d \n",i, *(++ptr));
+
 		}
 	return 0;
 	}
