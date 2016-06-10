@@ -12,17 +12,21 @@ int main(void){
 	for( i =0; i < 6; i++){
 		printf("my_array[%d] = %d   	",i,my_array[i]); /*<--A */
 	//	printf("ptr + %d = %d \n",i, *(ptr + i));	/*<--B */
-}	
+}
+
+	
 
 printf("Ex: B\n\n");
 	for( i =0; i < 6; i++){
 		printf("my_array[%d] = %d   	",i,my_array[i]); /*<--A */
 //		printf("ptr + %d = %d \n",i, *ptr++);
 	}
+
+
 printf("Ex: C \n\n");
 	for( i =0; i < 6; i++){
 		printf("my_array[%d] = %d   	",i,my_array[i]); /*<--A */
-		printf("ptr + %d = %d \n",i, *(++ptr));
+		printf("ptr + %d = %d | address: %p \n",i, *(++ptr),&(*(++ptr)));
 
 		}
 	return 0;

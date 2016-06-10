@@ -76,7 +76,7 @@ int main(void){
 		}
 
 	for(x =0; x< strlen(inputText); x++){		
-		printf("main index ID:sx[i][%c]",]);
+		printf("main index ID:sx[i][%s",s[i][j]);
 
 	}
 
