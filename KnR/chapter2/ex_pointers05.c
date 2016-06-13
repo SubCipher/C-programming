@@ -24,7 +24,6 @@ int main(){
 	A(&netWorthA);
 	
 
-
 	printf("function B: %d\nfunction A:%d",netWorthB,netWorthA);
 
 
