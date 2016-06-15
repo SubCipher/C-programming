@@ -12,10 +12,17 @@ int main(){
 		for(j =0; j <strlen(word2); j++){
 			if(word1[i] == word2[j]){
 				printf("match, %c\n",word1[i] );
-				newWord[k++] = word1[i];
+				word1[k++] = word1[i];
+		
+			if(word1[i] != word2[j]){
+				word1[k++] = ' ';
+			
+			}
+
 			}	
 		}			
 
 	}	
-		printf("%s\n\n",newWord);
+//		printf("%s\n\n",newWord);
+		printf("%s\n\n",word1);
 }
