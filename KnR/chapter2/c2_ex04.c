@@ -92,6 +92,5 @@ int main(void)
 			}
 		}
 
-		printf("data type: %s: ", typeof(rightstr));
 	return 0;
 }
