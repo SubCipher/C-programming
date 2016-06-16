@@ -6,13 +6,8 @@ int main(void){
 
  char *leftstr[] =
   {
-    "",
-	"a",
-	"antidisestablishmentarianism",
-	"beautifications",
-	"characteristically",
-	"deterministically",
-	"electroencephalography",
+    "","a","antidisestablishmentarianism","beautifications","characteristically","deterministically","electroencephalography",
+	NULL,
     "familiarisation",
     "gastrointestinal",
     "heterogeneousness",
@@ -33,7 +28,7 @@ int main(void){
     "wholeheartedly",
     "xylophonically",
     "youthfulness",
-    "zoologically",
+    "zoologically"
   };
   char *rightstr[] =
   { "",
@@ -67,30 +62,17 @@ int main(void){
 	int i,j;
 	int count;
 	printf("\n\n");	
+	printf("sizeof leftstr: %lu",sizeof leftstr);
 
-	for(i =0; i < sizeof(leftstr); ++i){
+	for(i =0; i < sizeof (leftstr) && leftstr[i] != '\0'; ++i){
 
-		printf("count: %d, sizeof leftstr[j][i]: %lu | sizeof leftstr[i]: %lu | char from s1: %p | %c \n",i,sizeof(leftstr[j][i]), sizeof(leftstr[i]), &leftstr[0][i],leftstr[0][i]);
-		count++;
-			
+			printf("char from s1: %p | %c\n", &leftstr[0][i],leftstr[0][i]);
+			count++;
+			printf("count: %d",i);
 		}
 
-	count =0;
-	int c;
-	printf("\n\n");
-	for(i =0; i < sizeof(leftstr) / sizeof(leftstr[0]);i++){
-		for(j = 0; j < strlen(leftstr[i]); j++){
-			
-			printf("assigned mem: %p | count: %d | word: %d | char (value of interest) %c\n",&leftstr[i][j],count,i,leftstr[i][j]);
+	printf("\n\n");	
 
-		if( ((c = getchar()) == leftstr[i][j])){
-			printf("found %c at count: %d | assigned mem: %p | in word: %d",c,count,&leftstr[i][j],i);
-	}
-			++count;
-
-			}
-		}	
-
-	return 0;
+return 0;
 
 }
