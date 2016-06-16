@@ -56,7 +56,7 @@ int main(void){
   };
 
 
-	int i,j;
+	int i,j,k;
 	int count;
 	printf("\n\n");	
 
@@ -68,26 +68,31 @@ int main(void){
 		}
 	int char_count =0;
 	count =0;
-	int c;
+	char c;
+
 	printf("\n\n");
+
+
+	printf("enter a character");
+	scanf("%c",&c);
+	printf("%c",c);
 	for(i =0; i < sizeof(leftstr) / sizeof(leftstr[0]);i++){
 		
 		for(j = 0; j < strlen(leftstr[i]); j++){
 			
-			printf("assigned mem: %p | count: %d | word: %d | char (value of interest) %c\n",&leftstr[i][j],count,i,leftstr[i][j]);
+		/*	printf("assigned mem: %p | count: %d | word: %d | char (value of interest) %c\n",&leftstr[i][j],count,i,leftstr[i][j]);
+*/
 
-
-		if( 'e'  == leftstr[i][j]){
+		if( c == leftstr[i][j]){
 			++char_count;
 			printf("found %c at count: %d | assigned mem: %p | in word: %d | number of occ's: %d\n",c,count,&leftstr[i][j],i,char_count);
 	}
-
 
 	++count;
 
 			}
 		}	
 
-	return 0;
+return 0;
 
 }
