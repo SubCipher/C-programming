@@ -36,7 +36,7 @@ int main(void){
     "zoologically",
   };
   char *rightstr[] =
-  { "",
+  { "", 
     "A",
     "the",
     "quick",
@@ -60,20 +60,12 @@ int main(void){
 	int count;
 	printf("\n\n");	
 
-	for(i =0; i < sizeof(leftstr); ++i){
-
-		printf("count: %d, sizeof leftstr[j][i]: %lu | sizeof leftstr[i]: %lu | char from s1: %p | %c \n",i,sizeof(leftstr[j][i]), sizeof(leftstr[i]), &leftstr[0][i],leftstr[0][i]);
-		count++;
-			
-		}
 	int char_count =0;
 	count =0;
 	char c;
 
 	printf("\n\n");
 
-
-	printf("enter a character");
 	for(k =0; k < sizeof(rightstr)/ sizeof(rightstr[0]); k++){
 		for(i =0; i < sizeof(leftstr) / sizeof(leftstr[0]);i++){
 		
