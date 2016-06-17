@@ -56,32 +56,44 @@ int main(void){
   };
 
 
-	int i,j,k;
+	int i=0;
+	int j=0; 
+	int k=0;
+	int l=0;
 	int count;
 	printf("\n\n");	
 
 	int char_count =0;
 	count =0;
-	char c;
 
 	printf("\n\n");
 
-	for(k =0; k < sizeof(rightstr)/ sizeof(rightstr[0]); k++){
 		for(i =0; i < sizeof(leftstr) / sizeof(leftstr[0]);i++){
 		
 			for(j = 0; j < strlen(leftstr[i]); j++){
+				for(k =0; k< sizeof(rightstr)/sizeof(rightstr[0]); k++){
+					
+					for(l=0; l< strlen(rightstr[k]); l++){
+							
+						printf("rightstr: %c | %c \n",rightstr[k][l],leftstr[i][j]);
 
-				if( rightstr[k][i] == leftstr[i][j]){
+			}
+		}
+
+
+			/*	if( rightstr[k][i] == leftstr[i][j]){
 					++char_count;
+				
 					printf("found %c at count: %d | assigned mem: %p | in word: %d | number of occ's: %d\n",rightstr[k][i],count,&leftstr[i][j],i,char_count);
+			*/
+
 				}
 
 				++count;
 
 	 		}
 		
-		}	
-	}
+	
 return 0;
 
 }
