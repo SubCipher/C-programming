@@ -5,22 +5,22 @@ int main(void){
 
 	int num = 0;
 	int i = 0;
-	int sum = 0;
+	int getNum = 0;
 	int remainder =0;
 	int total;
 
 
 	printf("enter a number");
-	scanf("%i",&num);
+	scanf("%i",&getNum);
 
 
-	
+	num = getNum;
 
 	while( num != 0){
 
-		remainder = sum % 10;
+		remainder = num % 10;
 		num = num / 10;
-		sum = num;
+	//	sum = num;
 		total += remainder;
 	
 	}
